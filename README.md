@@ -7,5 +7,6 @@ Ces textes ne seront pas véritablement un cours formel consacré à l'assembleu
 Dans la partie code, vous trouverez les différents chapitres. Chaque chapitre contient un fichier explicatif texte.md  et des petits programmes avec l'extention .asm. <br>
 <br>
 Comme prérequis, il faut connaitre un minimum de commandes Linux pour créer des repertoires, lancer un programme etc et un minimun de connaissance en programmation et algorithmique.<br>
+Remarque : le répertoire principal s'appelle vincentARM, parceque j'ai commencé à apprendre l'assembleur ARM sur les Raspberry PI.<br>
 
 <h3>Chapitre 1 : installation des outils necessaires.</h3>
