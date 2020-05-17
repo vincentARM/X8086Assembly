@@ -1,6 +1,6 @@
 ; assembleur 32 bits Linux 
-; programme : pgm3.asm
-; affichage d'un registre 
+; programme : pgm1_1.asm
+; affichage d'un message
 
 bits 32
 
