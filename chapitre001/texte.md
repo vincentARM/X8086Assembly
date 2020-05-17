@@ -24,8 +24,9 @@ Cette première instruction met la valeur 1 dans le premier registre eax. Ah mai
 La deuxième instruction met la valeur 255 dans le registre ebx et la 3ième instruction int 0x80 est une instruction d'interruption qui indique au microprocesseur d'appeler des fonctions du système d'exploitation Linux.
 Que font donc exactement ces instructions ? <br>
 L'instruction int 0x80 demande donc à Linux d'executer une fonction dont le code est égale à 1 code qui est mis dans le registre eax. Cette fonction 1 correspond à la fonction EXIT, c'est à dire l'execution de la fin du processus. <br>
-Cette fonction attend comme paramètre un code retour qui sera transmis par le registre ebx à Linux qui pourra l'utiliser à votre demande (par exemple l'afficher par la commande echo $?).
-Donc ici, ces instructions demandent simplement de terminer votre programme proprement. Mais essayons d'executer ce programme en mettantt l'instruction int 0x80 en commentaire (avec un ; devant). Le compilateur ne signale pas d'erreur, le linker non plus mais l'excution se termine par le message : Erreur de segmentation (core dumped)
-Pourquoi, et bien le microprocesseur execute les 2 premieères instructions puis continue à charger et à executer ce qu'il y a derrière c'est à dire n'importe quoi !! et donc il ne sait plus quoi faire et indiquer une erreur à linux qui affiche ce message que vous arez souvent !!<br>
+Cette fonction attend comme paramètre un code retour qui sera transmis par le registre ebx à Linux qui pourra l'utiliser à votre demande (par exemple l'afficher par la commande echo $?).<br>
+Donc ici, ces instructions demandent simplement de terminer votre programme proprement. <br>
+Mais essayons d'executer ce programme en mettantt l'instruction int 0x80 en commentaire (avec un ; devant). Le compilateur ne signale pas d'erreur, le linker non plus mais l'excution se termine par le message : Erreur de segmentation (core dumped)<br>
+Pourquoi ? et bien le microprocesseur execute les 2 premières instructions puis continue à charger et à executer ce qu'il y a derrière c'est à dire n'importe quoi !! et donc il ne sait plus quoi faire et indique une erreur à Linux qui affiche ce message que vous aurez souvent !!<br>
 
 
