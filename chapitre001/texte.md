@@ -14,8 +14,18 @@ Normalement, vous ne devez pas avoir d'erreur !!. Vous devez trouver dans le ré
 L'execution ne doit pas produire de message d'erreur et vous pouvez vérifier la valeur du code retour en tapant echo $?. <br>
 Il doit s'afficher la valeur 255 et si cela se produit c'est que tout est OK.
 <br>
-Revenons au source de ce premier programme assembleur. Les 3 premières lignes commençant par ; sont des commentaires. Tous les commentaires commenceront par ; .
-Ensuite nous trouvons les 2 instructions global main et main:. main: est une étiquette (ou un nom ou un label) qui indique l'adresse du début des instructions à executer. global main permet de faire connaitre l'etiquette main à tout processus externe à votre programme et en particulier à l'editeur de liens. Celui çi saura quelle est la première instruction à executer et l'indiquera dans le fichier executable. Ainsi linux chargera l'executable et executera la première instruction se trouvant à cette adresse main:
-Puis nous trouvons la première vértitable instruction qui sera executer par le microprocesseur : mov eax,1
+Revenons au source de ce premier programme assembleur. Les 3 premières lignes commençant par ; sont des commentaires. Tous les commentaires commenceront par ; .<br>
+Ensuite nous trouvons les 2 instructions global main et main:. main: est une étiquette (ou un nom ou un label) qui indique l'adresse du début des instructions à executer. global main permet de faire connaitre l'etiquette main à tout processus externe à votre programme et en particulier à l'editeur de liens. Celui çi saura quelle est la première instruction à executer et l'indiquera dans le fichier executable. Ainsi linux chargera l'executable et executera la première instruction se trouvant à cette adresse main: <br>
+Puis nous trouvons la première vértitable instruction qui sera executée par le microprocesseur : mov eax,1 <br>
+eax est le nom d'un registre. Un registre est une entité électronique qui contient 32 positions qui peuvent prendre la valeur allumée ou eteinte. Cela représente les valeurs binaires 0 et 1 et permettent de représenter toutes les valeurs entières comprises entre 0 et 2 à la puissance 32 - 1 soit le nombre 4 294 967 295.<br>
+Les registres sont les éléments essentiels du microprocesseur et les instructions assembleur vont les manipuler pour effectuer vos caculs et opérations. <br>
+Pour ce type de microprocesseur, nous disposons de 4 registres principaux appelés eax, ebx, ecx, edx et de registres spéciaux que nous découvrirons petit à petit.<br>
+Cette première instruction met la valeur 1 dans le premier registre eax. Ah mais c'est bizarre, on ecrit le registre destinataire d'abord et la valeur source après. Oui et il faudra vous habituer !! Cela provient des tous premiers ordinateurs et cela est resté jusqu'à nos jours pour la plupart des assembleurs.<br>
+La deuxième instruction met la valeur 255 dans le registre ebx et la 3ième instruction int 0x80 est une instruction d'interruption qui indique au microprocesseur d'appeler des fonctions du système d'exploitation Linux.
+Que font donc exactement ces instructions ? <br>
+L'instruction int 0x80 demande donc à Linux d'executer une fonction dont le code est égale à 1 code qui est mis dans le registre eax. Cette fonction 1 correspond à la fonction EXIT, c'est à dire l'execution de la fin du processus. <br>
+Cette fonction attend comme paramètre un code retour qui sera transmis par le registre ebx à Linux qui pourra l'utiliser à votre demande (par exemple l'afficher par la commande echo $?).
+Donc ici, ces instructions demandent simplement de terminer votre programme proprement. Mais essayons d'executer ce programme en mettantt l'instruction int 0x80 en commentaire (avec un ; devant). Le compilateur ne signale pas d'erreur, le linker non plus mais l'excution se termine par le message : Erreur de segmentation (core dumped)
+Pourquoi, et bien le microprocesseur execute les 2 premieères instructions puis continue à charger et à executer ce qu'il y a derrière c'est à dire n'importe quoi !! et donc il ne sait plus quoi faire et indiquer une erreur à linux qui affiche ce message que vous arez souvent !!<br>
 
 
