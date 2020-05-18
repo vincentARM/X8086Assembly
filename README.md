@@ -10,3 +10,5 @@ Comme prérequis, il faut connaitre un minimum de commandes Linux pour créer de
 Remarque : le répertoire principal s'appelle vincentARM, parceque j'ai commencé à apprendre l'assembleur ARM sur les Raspberry PI.<br>
 
 <h3>Chapitre 1 : installation des outils necessaires.</h3>
+
+<h3>Chapitre 2 : affichage d'un message dans la console.</h3>
