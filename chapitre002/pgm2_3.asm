@@ -6,8 +6,9 @@
 ; Variables initialisées segment 
 ;************************************************************
 section .data
-hello: db "Hello world."
-
+hello:      db "Hello world.",10
+LGHELLO    equ $ - hello
+       db "Bonjour.",10
 ;************************************************************
 ; Variables non initialisées segment 
 ;************************************************************
@@ -21,7 +22,7 @@ main:
     mov eax,4              ; appel système write
     mov ebx,1              ; console sortie
     mov ecx,hello          ; adresse du message
-    mov edx,14             ; longueur 
+    mov edx,LGHELLO        ; longueur 
     int 0x80
 
                            ; Fin standard du programme
