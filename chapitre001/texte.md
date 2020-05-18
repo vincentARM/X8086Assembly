@@ -5,7 +5,7 @@ En ce qui me concerne, j'ai installé notepad++ car cet éditeur bien que simple
 Pour la compilation, j'ai implanté le compilateur nasm (et pas Masm compilateur Microsoft) avec le package nasm.
 Pour les informations, le forum etc. voir le site https://www.nasm.us/ et le manuel utilisateur en pdf : https://www.nasm.us/xdoc/2.14.02/nasmdoc.pdf.
 Après saisie, le programme source est sauvegardé abec l'extension .asm. <br>
-Le compilateur nasm peut être lancé avec la commande : nasm -f elf <pgm>.asm avec <pgm> correspondant au nom du programme à compiler. Après compilation sans erreur, un module objet nommé <pgm>.o doit se trouver dans le même répertoire. <br> 
+Le compilateur nasm peut être lancé dans une console (terminal) linux avec la commande : nasm -f elf <pgm>.asm avec <pgm> correspondant au nom du programme à compiler. Après compilation sans erreur, un module objet nommé <pgm>.o doit se trouver dans le même répertoire. <br> 
 
 Pour l'éditeur de liens, j'ai utilisé le linker standard ld mais il est aussi possible d'utiliser gcc ou d'autres linkers.<br>
 L'éditeur ld est lancé avec la commande : ld -m elf_i386 <pgm>.o -o <pgm> -e main . Si aucune erreur n'est detectée, le programme executable <pgm> doit être présent dans le repertoire. <br>
