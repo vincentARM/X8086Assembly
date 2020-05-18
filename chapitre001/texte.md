@@ -33,4 +33,20 @@ Donc ici, ces instructions demandent simplement de terminer votre programme prop
 Mais essayons d'executer ce programme en mettant l'instruction int 0x80 en commentaire (avec un ; devant). Le compilateur ne signale pas d'erreur, le linker non plus mais l'excution se termine par le message : Erreur de segmentation (core dumped)<br>
 Pourquoi ? et bien le microprocesseur execute les 2 premières instructions puis continue à charger et à executer ce qu'il y a derrière c'est à dire n'importe quoi !! et donc il ne sait plus quoi faire et indique une erreur à Linux qui affiche ce message que vous aurez souvent !!<br>
 Voyons aussi quelques erreurs signalées par le compilateur : remplaçons le mov eax,1 par muv eax,1
+Le compilateur indique l'erreur suivante :<br>
+pgm1_0.asm:9: error: parser: instruction expected  en indiquant une erreur ligne 9 <br>
+
+Mettons maintenant mov dax,1 et le compilateur signale :
+pgm1_0.asm:9: error: symbol 'dax' undefined
+
+Et pour terminer, mettons la ligne global main en commentaire :
+C'est le linker ld qui signale un avertissement mais qu'il faudra aussi corriger :
+ld : avertissement : le symbole d'entrée main est introuvable ; utilise par défaut 0000000008048060
+
+Vous remarquerez que hormis les commentaires, toutes ces instructions sont importantes pour le bon fonctionnement du programme.
+
+
+
+
+
 
