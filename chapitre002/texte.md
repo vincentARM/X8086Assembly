@@ -10,12 +10,12 @@ Remarque : sur internet il faut faire attention car les codes 64 bits sont diff�
 Sur internet, en plus du code, nous trouvons le type des données à mettre dans les differents registres pour transmettre des paramètres à Linux mais aussi des descriptions de chaque fonction. Il est aussi possible de consulter les manuels de linux avec la commande man par exemple man write.<br>
 Ici, nous allons mettre le code 4 dans le registre eax pour l'appel WRITE, le code 1 dans le registre ebx pour indiquer que nous voulons écrire sur la console standard de sortie Linux (STDOUT), le label du message dans le registre ecx (donc l'adresse en mémoire de notre chaine de caractères) puis la longueur de la chaine soit 14 dans le registre edx. Nous appelons l'interruption x80 pour afficher notre chaine puis comme pour le précédent programme pour appelons la fonction EXIT pour terminer correctement le programme.<br>
 Après avoir corrigé les éventuelles erreurs de saisie, l'execution du programme donne ceci : <br>
-Hello world.vincent@vincent-Latitude-D610:~/assembleur32/projet2$ <br>
+Hello world.vincent@vincent-Latitude-D610: <br>
 Tout ce qui est après le / est mon invite de commande de la console Linux. Il serait donc judicieux d'effectuer un saut de ligne. Pour cela il faut inserer le caractère saut de ligne en fin de message. Pour ceux qui pratique déjà un langage de programmation ils savent qu'il s'agit du caractère décimal 10 ou x0A décimal ou aussi \n.<br>
 Bien que connu de nasm, le caractère \n ne semble pas reconnu et donc ne fonctionne pas ni dans la chaine ni en dehors.
 L'ajout en fin de chaine du caractère 10 fonctionne comme le montre le programme pgm2_1.asm. <br>
 Hello world.
-vincent@vincent-Latitude-D610:~/assembleur32/projet2$ <br>
+vincent@vincent-Latitude-D610: <br>
 
 Nous pouvons aussi tester des longueurs d'affichage passées dans le registre edx. Par exemple 5, ce qui donne :
 Hellovincent@vincent-Latitude-D610:~/assembleur32/projet2$ <br>
@@ -24,7 +24,7 @@ Et Monsieur si nous mettons une longueur plus grande que la taille de la chaine 
 Restons modeste !! appelez moi simplement maitre !!   Voyons avec 20
 L'affichage semble identique. Pourtant si on ajoute comme dans le programme pgm2_2 une autre chaine derrière la premiere, le programme affiche 6 caractères de la seconde. <br>
 Hello world.
-Bonjourvincent@vincent-Latitude-D610:~/assembleur32/projet2$ <br>
+Bonjourvincent@vincent-Latitude-D610: <br>
 
 Mais maitre, nous n'allons pas compter à chaque fois les caractères de chaque message que nous voulons afficher ? Non bien sûr, nous allons voir une première methode pour calculer une chaine de caractères fixe. Il suffit d'ajouter la pseudo instruction 
 LGHELLO    equ $ - hello <br>
