@@ -9,7 +9,7 @@ Dans la partie code, vous trouverez les différents chapitres. Chaque chapitre c
 Ces exemples s'adressent plutôt à un public de débutants, et comme prérequis, il faut connaitre un minimum de commandes Linux pour créer des repertoires, lancer un programme etc et un minimun de connaissance en programmation et algorithmique.<br>
 Remarque : le répertoire principal s'appelle vincentARM, parceque j'ai commencé à apprendre l'assembleur ARM sur les Raspberry PI et j'ai mis mes programmes sur Github.<br>
 
-<h3>Chapitre 1 : installation des outils necessaires.</h3>
+<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre001">Chapitre 1 : installation des outils necessaires.</a></h3>
 
 <h3>Chapitre 2 : affichage d'un message dans la console.</h3>
 
