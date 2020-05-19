@@ -7,10 +7,12 @@ Ces textes ne seront pas véritablement un cours formel consacré à l'assembleu
 Dans la partie code, vous trouverez les différents chapitres. Chaque chapitre contient un fichier explicatif texte.md  et des petits programmes avec l'extention .asm. <br>
 <br>
 Ces exemples s'adressent plutôt à un public de débutants, et comme prérequis, il faut connaitre un minimum de commandes Linux pour créer des repertoires, lancer un programme etc et un minimun de connaissance en programmation et algorithmique.<br>
-Remarque : le répertoire principal s'appelle vincentARM, parceque j'ai commencé à apprendre l'assembleur ARM sur les Raspberry PI et j'ai mis mes programmes sut Github.<br>
+Remarque : le répertoire principal s'appelle vincentARM, parceque j'ai commencé à apprendre l'assembleur ARM sur les Raspberry PI et j'ai mis mes programmes sur Github.<br>
 
 <h3>Chapitre 1 : installation des outils necessaires.</h3>
 
 <h3>Chapitre 2 : affichage d'un message dans la console.</h3>
 
 <h3>Chapitre 3 : affichage d'un message dans la console (passage de l'adresse par la pile).</h3>
+
+<h3>Chapitre 4 : affichage d'un libellé à l'aide d'une macro instruction.</h3>
