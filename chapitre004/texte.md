@@ -7,6 +7,7 @@ Sur la première ligne nous trouvons le nom de la macro afficherLib et le chiffr
 Puis nous trouvons une instruction de saut à l'étiquette %%endstr. En effet nous devons stocker notre libelle en mémoire avec l'instruction db comme nous l'avons vu dans les chapitres précédents et donc nous mettons cette instruction dans le code mais il ne faut pas que le processeur essair de l'executer donc nous la sautons.<br>
 L'instruction db est précedée de son label %%str et contient notre libelle que nous inserons avec le code $1 puis il est suivi du code retour ligne et du 0 final de fin de chaine. <br>
 Ensuite il nous suffit de mettre sur la pile le nouveau label et d'appeler notre routine d'affichage précedente : celle qui attend un paramètre sur la pile.<br>
+Remarque : J'ai remplacé les 2 instructions push ebp et mov ebp,esp par une instruction qui fait a peu prés la même chose enter 0,0 (prologue) et l'instruction de fin pop ebp par l'instruction leave (epilogue).<br>
 Nous pouvons donc inserer notre macro où bon nous semble dans le programme et voici le résultat.
 Début du programme.
 toto
