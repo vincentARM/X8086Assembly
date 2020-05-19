@@ -1,6 +1,6 @@
 ; assembleur 32 bits Linux 
-; programme : pgm2.asm
-; affichage d'un message
+; programme : pgm2_3.asm
+; affichage d'un message avec calcul statique de la longueur
 
 ;************************************************************
 ; Variables initialisées segment 
