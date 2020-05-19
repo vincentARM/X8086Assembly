@@ -1,7 +1,8 @@
 ; assembleur 32 bits Linux 
-; programme : pgm2_4.asm
+; programme : pgm2_5.asm
 ; routine d'affichage avec calcul de la longueur
 ; passage paramètre par un registre 
+; sauvegarde et restaur des registres dans la routine 
 
 ;************************************************************
 ;               Constantes 
