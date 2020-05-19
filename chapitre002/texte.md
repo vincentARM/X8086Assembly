@@ -47,7 +47,18 @@ Puis nous trouvons l'instruction je .A2 qui est une instruction de saut (jump) �
 Si le caractère n'est pas égal à 0, il faut incrementer le compteur avec l'instruction add edx,1 qui ajoute 1 au compteur (ça c'est facile à comprendre). <br> 
 Puis nous bouclons à nouveau à la comparaison du caractère suivant avec l'instruction jmp .A1 : qui est un saut inconditionnel à l'étiquette .A1. <br>
 Enfin nous terminons la routine par l'appel systeme linux Write comme précedement. <br> 
-Mais il y a encore une nouvelle instruction tout à fait à la fin : ret. En effet il faut dire que notre routine est terminé et que le processeur doit revenir au programme principal pour executer les instructions suivantes. C'est le rôle de cette instruction qui ne doit jamais être oubliée sinon votre programme ira executer n'importe quoi ou la routine suivante si elle existe.
+Mais il y a encore une nouvelle instruction tout à fait à la fin : ret. En effet il faut dire que notre routine est terminée et que le processeur doit revenir au programme principal pour executer les instructions suivantes. C'est le rôle de cette instruction qui ne doit jamais être oubliée sinon votre programme ira executer n'importe quoi ou la routine suivante si elle existe.
+Voyons le déroulement de ce programme : tout d'abord il faut se rappeler (ou découvrir) que le processeur execute les instructions du programme et qui se trouvent dans la mémoire à la section .text à l'aide d'un registre particulier (eip) qui contient l'adresse de l'instruction à executer. Comme indiqué au chapitre 1 c'est le linker qui indique par l'intermèdiaire du label main et de la directive -e main au processeur, quelle est l'adresse de la première éxecution à excuter. Lors du chargement de l'excutable, linux va copier cette adresse dans le registre eip et passer la main au processeur. <br>
+Notre première instruction va donc mettre dans le registre eax, l'adresse de la chaine à afficher puis le processeur va mettre dans eip l'adresse suivante et va executer le call afficherMess. Le processeur va mettre dans le registre eip l'adresse de notre routine afficherMess pour aller l'executer mais il stocke aussi l'adresse suivante dans un autre registre particulier esp, courament appelé la pile.<br>
+Et le processeur va excecuter toutes les instructions de notre routine et lorqu'il va arriver à l'instruction ret, il va reprendre l'adresse stockée sur la pile pour revenir executer l'instruction suivant notre premier call. C'est l'affichage de la deuxième chaine qui indique la fin du programme. Et tout va bien !!<br>
+Voici le résultat :
+Bonjour le monde.
+Fin normale du programme. <br>
+Ce mécanisme d'appel de routine doit être bien compris car c'est un élément essentiel de la programmation en assembleur.<br>
+Mais Maitre, votre routine utilise les registres ebx ecx et edx et donc si je les ai aussi utilisés dans mon programme principal, leur valeur va être perdue ? <br>
+Oui c'est exact et donc il faut sauvegarder les valeurs de ces registres en début de notre routine et les restaurer à la fin avant l'instruction de retour.
+
+
 
 
 
