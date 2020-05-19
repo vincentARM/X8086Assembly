@@ -56,8 +56,9 @@ Bonjour le monde.
 Fin normale du programme. <br>
 Ce mécanisme d'appel de routine doit être bien compris car c'est un élément essentiel de la programmation en assembleur.<br>
 Mais Maitre, votre routine utilise les registres ebx ecx et edx et donc si je les ai aussi utilisés dans mon programme principal, leur valeur va être perdue ? <br>
-Oui c'est exact et donc il faut sauvegarder les valeurs de ces registres en début de notre routine et les restaurer à la fin avant l'instruction de retour.
-
+Oui c'est exact et donc il faut sauvegarder les valeurs de ces registres en début de notre routine et les restaurer à la fin avant l'instruction de retour.<br>
+Pour cela nous disposons des instructions push et pop qui vont sauvegarder les valeurs sur la pile : voir le programme pgm2_5.asm. Donc en début de routine nous ajoutons les instruction push eax push ebx push ecx push edx et en fin de routine les instructions pop edx pop ecx pop ebx pop eax. Vous remarquerez que l'on dépile les registres dans l'ordre inverse du stockage. Il est très important de respecter cela et toujours d'avoir autant de push que de pop sinon la pile sra dephasée et les consèquences catastrophiques mais nous verrons cela plus tard.  
+A titre d'exercice, vous pouvez ajouter d'autres chaines et appeler la routine pour les afficher. Avec saut de ligne ou sans saut de ligne. Afficher une ligne vide !!! Afficher d'autres caractères comme des chiffres etc. 
 
 
 
