@@ -33,6 +33,26 @@ Puis nous remplaçons le nombre 14 de l'instruction mov edx,14 par LGHELLO comme
 Et cela fonctionne.<br>
 Et pour un message qui peut avoir une longueur variable ? Et bien, il faut calculer sa longueur et nous allons voir comment. Mais comme l'affichage d'un message va être utilisé frequement, nous allons écrire une routine (ou un sous programme ou une procèdure) qui pourra être executée plusieurs fois.
 
+Dans le programme pgm2_4, j'ai rajouté une partie Constantes dans laquelle j'ai défini les constantes déjà utilisées : STDOUT, EXIT et WRITE. Nasm accepte 2 façons des les définir soit avec la pseudo instruction %define soit avec equ (pour equal ou equivalent). Ces définitions indiquent que ces noms sont équivalents aux valeurs qui suivent. STDOUT aura dons la valeur 1 et le compilateur remplacera STDOUT par cette valeur.<br>
+Ensuite j'ai modifié le label de la chaine hello pour l'appeler szHello, sz pour string terminée par zero. C'est une bonne façon de procéder pour savoir dans la suite du code quelle est la nature du label manipulé.<br>
+J'ai ajouté une nouvelle chaine szMessFinPgm que le programme affichera à la fin de son execution. Cela permet de savoir si un programme s'est terminé correctement !!<br>
+Dans le code du programme , nous mettons toujours dans le registre eax l'adresse de la chaine à afficher puis nous appelons la nouvelle routine par call afficherMess. <br>
+Plus loin nous trouvons la description de cette routine. Son nom est une simple étiquette afficherMess puis nous trouvons les instructions pour calculer la longueur de la chaine dont l'adresse est contenue dans le registre eax. <br>
+Comment calculer en assembleur la longueur de cette chaine. Il nous faut compter le nombre de caractères qui la composent en lisant chaque caractère jusqu'à la fin. Mais qu'est la fin d'une chaine ? Les informaticiens ont pris l'habitude de l'indiquer en mettant la valeur zéro binaire après les caractères ASCII de la chaine. C'est pourquoi la chaine "hello world" se termine par les caractères 10 (pour le retour ligne) et 0 pour indiquer la fin.<br>
+Donc nous devons comparer chaque caractère avec la valeur zero. Si le caractère est different, nous devons incrementer un compteur et s'il est egal à zéro, nous arreterons le comptage et le compteur contiendra la longueur de la chaine. <br>
+Comme la longueur doit être passée à la fonction système WRITE dans le registre edx, c'est ce registre qui nous servira de compteur. Nous le mettons donc à zéro en début de routine : remarque importante : il faut toujours initialiser un registre avant de l'utiliser car il peut contenir n'importe quoi !!
+Ensuite il nous faut comparer chaque caractère de la chaine avec zéro. C'est le role de l'instruction cmp byte [eax,edx],0
+cmp pour comparaison byte car nous nous ne voulons qu'un seul caractère ASCII dont la longueur est un octet (8 bits ou byte) et qui se trouve à l'adresse contenue dans eax et à la position donnée par le compteur edx. Notez bien que tout cela est indiqué entre les crochets. En effet il faut bien comprendre cela : cmp eax,0   compare la valeur contenue dans le registre eax avec la valeur zéro alors que cmp [eax],0 compare la valeur se trouvant en mémoire à l'adresse contenue dans le registre eax.<br>
+Puis nous trouvons l'instruction je .A2 qui est une instruction de saut (jump) à l'étiquette locale .A2. Ce saut n'est effectué que si la comparaison précédente est égale à zéro et c'est le e qui signifie égal. Si on avait voulu sauter si la comparaison n'etait pas égale, nous aurions utiliser jne  (jump not equal).<br>
+Si le caractère n'est pas égal à 0, il faut incrementer le compteur avec l'instruction add edx,1 qui ajoute 1 au compteur (ça c'est facile à comprendre). <br> 
+Puis nous bouclons à nouveau à la comparaison du caractère suivant avec l'instruction jmp .A1 : qui est un saut inconditionnel à l'étiquette .A1. <br>
+Enfin nous terminons la routine par l'appel systeme linux Write comme précedement. <br> 
+Mais il y a encore une nouvelle instruction tout à fait à la fin : ret. En effet il faut dire que notre routine est terminé et que le processeur doit revenir au programme principal pour executer les instructions suivantes. C'est le rôle de cette instruction qui ne doit jamais être oubliée sinon votre programme ira executer n'importe quoi ou la routine suivante si elle existe.
+
+
+
+
+
 
 
 
