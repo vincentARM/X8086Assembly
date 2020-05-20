@@ -11,8 +11,8 @@ Remarque : le répertoire principal s'appelle vincentARM, parceque j'ai commenc�
 
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre001">Chapitre 1 : installation des outils necessaires.</a></h3>
 
-<h3>Chapitre 2 : affichage d'un message dans la console.</h3>
+<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 : affichage d'un message dans la console.</a></h3>
 
-<h3>Chapitre 3 : affichage d'un message dans la console (passage de l'adresse par la pile).</h3>
+<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre003">Chapitre 3 : affichage d'un message dans la console (passage de l'adresse par la pile).</a></h3>
 
-<h3>Chapitre 4 : affichage d'un libellé à l'aide d'une macro instruction.</h3>
+<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre004">Chapitre 4 : affichage d'un libellé à l'aide d'une macro instruction.</a></h3>
