@@ -33,6 +33,7 @@ Affichage décimal d'un registre : 0
 Affichage décimal d'un registre : 4294967295
 Fin normale du programme.
 </pre><br>
+Ah j'oubliais, la routine de conversion se termine par ret 8  car en effet nous avons 2 paramètres en entrée de la routine et donc il faut réaligner la pile de 2 fois 4 octets = 8.
 
 
 
