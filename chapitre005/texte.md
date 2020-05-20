@@ -23,7 +23,7 @@ Donc pour stocker un octet, il faut utiliser une partie du registre edx ou plus 
 En fin de boucle, nous avons donc stocké tous les chiffres significatifs en fin de notre zone receptrice !! et il nous reste à ramener tous ces chiffres en début de zone : c'est le but de la 2ième boucle, nous initialisons le registre ebx à zéro et il nous servira de pointeur vers le début de la zone et le registre ecx pointe lui sur le premier chiffre du résultat. Il nous suffit donc de lire un caractère dans le registre dl puis de le charger au début de la zone réceptrice.<br>
 Mais Maître pourquoi passer par un registre intermédiaire ? ne peut on pas avoir directement <b>mov byte [edi,ebx],[edi,ecx] </b>?
 Et bien non, cela n'est pas possible car la liaison entre le processeur et la mémoire s'effectue par un seul bus et celui ci ne peut pas simultanément écrire et lire la mémoire.<br>
-Puis nous terminons la routine par retourner le nombre de chiffre trouvé dans le registre eax et nous restaurons les registres comme déjà vu.<br>
+Puis nous terminons la routine par retourner le nombre de chiffre trouvé dans le registre eax et nous restaurons les registres comme déjà vu. Le retour d'une valeur dans eax est la méthode la plus préconisée pour retourner un résultat à l'appelant.<br>
 Dans le programme principal, il ne nous reste plus qu'à mettre sur la pile, le registre que nous voulons afficher et appeler la routine afficherReg. Pour tester, nous essayons les valeurs 1234, 0, et la plus grande valeur ( (1<<32)- 1).
 Voici les résultats :
 <pre>
@@ -33,7 +33,21 @@ Affichage décimal d'un registre : 0
 Affichage décimal d'un registre : 4294967295
 Fin normale du programme.
 </pre><br>
-Ah j'oubliais, la routine de conversion se termine par ret 8  car en effet nous avons 2 paramètres en entrée de la routine et donc il faut réaligner la pile de 2 fois 4 octets = 8.
+Ah j'oubliais, la routine de conversion se termine par ret 8  car en effet nous avons 2 paramètres en entrée de la routine et donc il faut réaligner la pile de 2 fois 4 octets = 8. <br>
+
+Dans le programme pgm5_1.asm, nous modifions les appels à la routine pour d'abord afficher la valeur 1234 puis afficher ce que contient le registre eax et vérifier ainsi que la longueur retournée est bien de 4. Ce n'est pas le cas l'affichage reste à 1234 !! Pourquoi ? <br>
+Dans la routine de conversion10, nous sauvegardons au début tous les registres par l'instruction pusha et en fin de routine, nous restaurons tous les registres à leur valeur initiale. Donc le registre eax retrouve sa valeur initiale et perd la longueur mise auparavant. De plus la routine appelante afficherReg sauve aussi le registre eax et le restaure en fin.<br>
+Dans le programme pgm5_2.asm, nous mettons l'instruction push eax et pop eax en commentaire et dans la routine conversion10, nous ne sauvegardons et restaurons que les registres ebx,ecx edx et edi. <br>
+L'execution est correcte et  retourne bien la bonne longueur :
+<pre>
+Début du programme.
+Affichage décimal d'un registre : 1234
+Affichage décimal d'un registre : 4
+Fin normale du programme.
+</pre>
+Dans le programme pgm5_3.asm, nous mettons des valeurs quelconques dans les registres ebx,ecx,edx et edi et nous vérifions après l'appel si ces valeurs restent inchangées. Tout fonctionne !!! <br> 
+
+
 
 
 
