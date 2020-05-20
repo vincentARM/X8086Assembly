@@ -46,6 +46,8 @@ C'est le linker ld qui signale un avertissement mais qu'il faudra aussi corriger
 ld : avertissement : le symbole d'entrée main est introuvable ; utilise par défaut 0000000008048060
 
 Vous remarquerez que hormis les commentaires, toutes ces instructions sont importantes pour le bon fonctionnement du programme.
+<br>
+Voir la liste de toutes les instructions possibles dans la documentation de nasm ou sur internet une liste réduite sur Wikipedia ou une liste plus compléte sur https://www.gladir.com/CODER/ASM8086/index.htm <br>
 
 
 
