@@ -1,6 +1,7 @@
 ; assembleur 32 bits Linux 
 ; programme : pgm5.asm
 ; affichage d'un registre 
+; verification des push et des pop
 
 bits 32
 
@@ -45,14 +46,24 @@ main:
     call afficherMess
 
     mov eax,1234
-    push eax
-    call afficherReg
-    mov eax,0
-    push eax
-    call afficherReg
+    mov ebx,101
+    mov ecx,102
+    mov edx,103
+    mov edi,104
 
-    mov ebx, (1<<32)- 1  ; plus grande valeur possible
+    push eax
+    call afficherReg
+    afficherLib "Controle ebx"
     push ebx
+    call afficherReg
+    afficherLib "Controle ecx"
+    push ecx
+    call afficherReg
+    afficherLib "Controle edx"
+    push edx
+    call afficherReg
+    afficherLib "Controle edi"
+    push edi
     call afficherReg
 
     push szMessFinPgm
@@ -95,7 +106,7 @@ afficherMess:
 ; le paramètre 1 contient la valeur à convertir
 afficherReg:
     enter 0,0            ; prologue
-    push eax             ; save registre
+    ;push eax             ; save registre
     mov eax, [ebp + 8]   ; recup de la valeur à convertir
     push szMessRegistre  ; affichage du debut du message 
     call afficherMess
@@ -106,7 +117,7 @@ afficherReg:
     call afficherMess
     push szRetourLigne   ; et affichage d'un retour ligne
     call afficherMess
-    pop eax              ; restaur des registres
+    ;pop eax              ; restaur des registres
     leave                ; epilogue
     ret
 ;************************************************************
@@ -116,7 +127,10 @@ afficherReg:
 ; parametre 2 contient l'adresse de la zone destinataire
 conversion10:
     enter 0,0              ; prologue
-    pusha                  ; sauvegarde des registres
+    push ebx               ; sauvegarde des registres
+    push ecx               ; sauvegarde des registres
+    push edx               ; sauvegarde des registres
+    push edi               ; sauvegarde des registres
     mov eax,[ebp + 12]     ; recup de la valeur à convertir
     mov edi,[ebp + 8]      ; recup de l'adresse 
     mov ecx,11             ; compteur de caractères 
@@ -143,6 +157,9 @@ conversion10:
 .finboucle:
     mov eax,ebx            ; retour longueur
 .fin:                      ; fin routine
-    popa
+    pop edi
+    pop edx
+    pop ecx
+    pop ebx
     leave                  ; epilogue
     ret  8                 ; car 2 paramètres en entrée

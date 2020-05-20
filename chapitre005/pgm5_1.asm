@@ -1,8 +1,8 @@
 ; assembleur 32 bits Linux 
-; programme : pgm5.asm
+; programme : pgm5_1.asm
 ; affichage d'un registre 
-
-bits 32
+; verification de la valeur de retour 
+; et ce n'est pas le cas, voir le programme suivant
 
 ;************************************************************
 ;               Constantes 
@@ -47,12 +47,7 @@ main:
     mov eax,1234
     push eax
     call afficherReg
-    mov eax,0
     push eax
-    call afficherReg
-
-    mov ebx, (1<<32)- 1  ; plus grande valeur possible
-    push ebx
     call afficherReg
 
     push szMessFinPgm
