@@ -10,4 +10,16 @@ Par exemple mettons dans eax une grande valeur comme 4 000 000 001 et multiplion
 Il faudra donc être vigilant lors de la programmation de ces instructions pour éviter des erreurs longues à rechercher.
 Nous terminons ce programme en essayant d'afficher la valeur des autres registres dont on a parlé: le pointeur d'instructions eip et le registre de pile esp. Il n'est pas possible d'afficher eip, le compilateur refuse d'utiliser le nom eip. Pour le registre de pile, nous pouvons afficher sa valeur mais cela ne nous donne pas grand chose sauf que c'est une adresse élevée !!!
 Et les autres opérations comme l'élévation à la puissance ? ou le calcul d'une racine carrée ? etc.<br>
-Non, l 'assembleur se contente que de ces operations pour les nombres entiers !! et pour le reste il vous faudra trouver un algorithme et écrire la routine correspondante.
+Non, l 'assembleur de dispose que de ces operations pour les nombres entiers !! et pour le reste il vous faudra trouver un algorithme et écrire la routine correspondante.<br>
+
+Dans le programme pgm6_1, nous allons revenir sur la multiplication car il est important de savoir si lors d'une opération, le résultat va dépasser la taille d'un registre. Et en effet, le processeur va positionner un indicateur (ou drapeau ou flag en anglais) dans ce cas. Pour notre multiplication, l'indicateur est l'indicateur Overflow dont la notation est o. Pour savoir s'il est positionné ou non, il faut utiliser les instructions de saut jo ou jno. <br>
+Dans le code du programme, vous pouvez voir une structure de type if-else qui affiche le libellé overflow si l'instruction jo est vraie sinon elle affiche le libellé pas d'overflow.
+Vérifions aussi l'addition, en additionnant une très grand valeur proche de la valeur maxi avec une autre valeur. Vous voyez que le résultat 4294967290 + 10 est egal à 4 ce qui est manifestement faux !! Et curieusement l'indicateur d'overflow n'est pas positionné. Dans ce cas le processeur positionne un autre indicateur, l'indicateur de retenue ou carry en anglais est qui est noté c. Et les instructions de saut pour tester cet indicateur sont jc et jnc. <b>
+Attention : le registre edx n'est pas alimenté avec le surplus comme dans la multiplication. 
+
+Vérifions maintenant la soustraction en effectuant le calcul tout simple 5 - 15 et le résultat est égal à 4294967286, ce qui de nouveau faux.
+Quel est l'indicateur positionné dans ce cas ?
+ 
+
+
+
