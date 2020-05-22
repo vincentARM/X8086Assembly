@@ -1,7 +1,7 @@
 ; assembleur 32 bits Linux 
-; programme : pgm5.asm
+; programme : pgm6_1.asm
 ; affichage d'un registre en base 10 
-; verification des instructions arithmètiques
+; verification des limites des instructions arithmètiques
 
 bits 32
 
@@ -45,17 +45,11 @@ main:
     push szMessDebPgm
     call afficherMess
 
-    mov eax,100
-    mov ebx,10
-    mov eax,ebx            ; verif mov
-    push eax
-    call afficherReg
-    afficherLib "Controle ebx après mov"
-
-    mov eax,4000
+    mov eax,4000             ; pas d'overflow
+    ; mov eax,4000000001     ; pour tester l'overflow
     mov ebx,1000             ; multiplicateur
     mul ebx
-    jno over
+    jo over
     afficherLib "Pas d'overflow"
     jmp suite
 over:
@@ -93,6 +87,26 @@ suite2:
     mov eax, 5
     mov ebx, 15
     sub eax,ebx
+    jo over3
+    afficherLib "Soustraction. Pas d'overflow"
+    jmp suite3
+over3:
+    afficherLib "Soustraction Overflow."
+suite3:
+    sub eax,ebx               ; soustraction refaite car afficherLib change les flags
+    jc over4
+    afficherLib "Soustraction. Pas de retenue"
+    jmp suite4
+over4:
+    afficherLib "Soustraction. Retenue."
+suite4:
+    sub eax,ebx
+    js over5
+    afficherLib "Soustraction. Positif"
+    jmp suite5
+over5:
+    afficherLib "Soustraction. Negatif."
+suite5:
     afficherLib "Controle eax aprés soustraction"
     push eax
     call afficherReg

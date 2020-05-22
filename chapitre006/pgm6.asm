@@ -1,5 +1,5 @@
 ; assembleur 32 bits Linux 
-; programme : pgm5.asm
+; programme : pgm6.asm
 ; affichage d'un registre en base 10 
 ; verification des instructions arithmètiques
 
@@ -101,8 +101,9 @@ main:
     call afficherReg
 
     mov eax,101
+    ;mov ebx,0                 ; pour tester la division par zéro
     mov ebx,20
-    ;mov edx,0
+    ;mov edx,0                 ; à remettre si pb dans le résultat
     div ebx
     afficherLib "Controle eax après div ebx"
     push eax
