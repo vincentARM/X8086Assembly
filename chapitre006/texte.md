@@ -2,7 +2,12 @@ Maintenant que nous avons une routine d'affichage d'un registre, nous pouvons ex
 Tout d'abord, nous vérifions l'instruction mov en mettant les valeurs 100 dans eax et 10 dans ebx puis en effectuant le mov eax,ebx. L'affichage montre bien que eax après l'opération contient bien 10 mais aussi que la valeur de ebx reste inchangée. Donc il s'agit plutôt d'une copie d'un registre dans un autre qu'un déplacement. <br>
 Ensuite nous testons les instructions d'addition add, de soustraction sub, de multiplication (pour laquelle il n'est pas possible d'indiquer une valeur immèdiate, il faut toujours utiliser un registre). <br>
 Il existe aussi une instruction d'incrémentation inc eax qui augmente de 1 le registre et de décrémentation qui diminue de 1 la valeur d'un registre. Cette instruction peut remplacer les add eax,1 que nous avons utilisé plusieurs fois dans les routines.<br>
-Nous vérifions aussi que les calculs sont possibles pour le registre edi. Puis nous vérifions à nouveau la division car l'initialisation du registre edx à zéro avant la division m'interpelle. Et en effet si on enchaine plusieurs divisions sans initialiser ce registre, les résultats sont déroutants.<br>
+Nous vérifions aussi que les calculs sont possibles pour le registre edi.<br>
+Nous vérifions la division du registre eax par ebx, et il est possible aussi de diviser eax par ecx. Nous pouvons aussi tester la division par zéro et nous avons le suprenant message :
+<pre>
+Exception en point flottant (core dumped)
+</pre>
+Puis nous vérifions à nouveau la division car l'initialisation du registre edx à zéro avant la division m'interpelle. Et en effet si on enchaine plusieurs divisions sans initialiser ce registre, les résultats sont déroutants.<br>
 Mais en regardant plus précisement la documentation des instructions (par exemple sur gladir), je me rends compte que le dividende de la division est la paire de registres edx:eax et non pas le seul eax. Cela permet de diviser un nombre de 64 bits par un nombre de 32 bits.<br>
 Voyons un exemple : mettre 1 dans le registre edx correspond à ajouter un 33 ieme bit à un nombre et donc d'ajouter la valeur 4 294 967 296 à la valeur du registre eax par exemple 100 ce qui donne 4 294 967 396. Si on le divise par 1000 et si on affiche le contenu du registre eax on doit trouver  4 294 967  et le registre edx doit donner comme reste 396. L'exécution du programme donne bien ces résultats.<br>
 Mais en réflechissant à cette histoire de division de 2 registres, je me suis demandé si la multiplication n'alimentait pas aussi la paire de registre edx:eax.<br>
