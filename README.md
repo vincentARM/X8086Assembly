@@ -19,3 +19,5 @@ Remarque 2 : ce document est écrit au fur et à mesure directement sur Github e
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre004">Chapitre 4 : affichage d'un libellé à l'aide d'une macro instruction.</a></h3>
 
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre005">Chapitre 5 : affichage du contenu d'un registre.</a></h3>
+
+<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 : opérations arithmètiques sur nombres entiers.</a></h3>
