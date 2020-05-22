@@ -3,7 +3,7 @@ Tout d'abord, nous vérifions l'instruction mov en mettant les valeurs 100 dans 
 Ensuite nous testons les instructions d'addition add, de soustraction sub, de multiplication (pour laquelle il n'est pas possible d'indiquer une valeur immèdiate, il faut toujours utiliser un registre). <br>
 Il existe aussi une instruction d'incrémentation inc eax qui augmente de 1 le registre et de décrémentation qui diminue de 1 la valeur d'un registre. Cette instruction peut remplacer les add eax,1 que nous avons utilisé plusieurs fois dans les routines.<br>
 Nous vérifions aussi que les calculs sont possibles pour le registre edi.<br>
-Nous vérifions la division du registre eax par ebx, et il est possible aussi de diviser eax par ecx. Nous pouvons aussi tester la division par zéro et nous avons le suprenant message :
+Nous vérifions la division du registre eax par ebx, et il est possible aussi de diviser eax par ecx. Nous pouvons aussi tester la division par zéro et nous avons le surprenant message :
 <pre>
 Exception en point flottant (core dumped)
 </pre>
