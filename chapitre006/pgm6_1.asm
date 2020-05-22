@@ -68,7 +68,7 @@ over1:
     push eax
     call afficherReg
 suite1:
-    afficherLib "Controle eax aprés addition"
+    afficherLib "Controle eax après addition"
     push eax
     call afficherReg
     afficherLib "Addition avec retenue"
@@ -76,10 +76,10 @@ suite1:
     mov ebx,10
     add eax,ebx
     jc over2
-    afficherLib "Pas d'overflow"
+    afficherLib "Pas de retenue"
     jmp suite2
 over2:
-    afficherLib "Overflow."
+    afficherLib "Retenue."
     push eax
     call afficherReg
 suite2:
