@@ -10,7 +10,7 @@ Ces exemples s'adressent plutôt à un public de débutants, et comme prérequis
 Remarque 1 : le répertoire principal s'appelle vincentARM, parce que j'ai commencé à apprendre l'assembleur ARM sur les Raspberry PI et j'ai mis mes programmes sur Github.<br>
 Remarque 2 : ce document est écrit au fur et à mesure directement sur Github et donc il contient des fautes d'orthographe, des erreurs et des inexactitudes !!!!  Veuillez être indulgent et me le signalez dans la partie issues. <br>
 
-<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre001">Chapitre 1 : installation des outils necessaires.</a></h3>
+<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre001">Chapitre 1 : installation des outils nécessaires.</a></h3>
 
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 : affichage d'un message dans la console.</a></h3>
 
@@ -20,4 +20,4 @@ Remarque 2 : ce document est écrit au fur et à mesure directement sur Github e
 
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre005">Chapitre 5 : affichage du contenu d'un registre.</a></h3>
 
-<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 : opérations arithmètiques sur nombres entiers.</a></h3>
+<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 : opérations arithmétiques sur nombres entiers.</a></h3>
