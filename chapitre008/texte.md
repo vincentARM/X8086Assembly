@@ -18,6 +18,6 @@ Ensuite nous mettons la valeur binaire 0011 dans le registre eax en la codant 0b
 Affichage registre en binaire : 00000000000000000000000000000001
 </pre>
 Vous remarquez que seul le bit dont les valeurs correspondantes de eax et ebx sont à un est à un, les autres sont remis à zéro ce qui correspond bien au ET logique. Nous testons les autres opérations logiques or, xor et not. <br>
-Nous testons aussi l’instruction xor appliquée au même registre. Vous remarquez que tous les bits passent à zéro. Vous trouverez cette instruction dans de nombreux exemples de programmes pour initialiser un registre à zéro. L’interet (tout relatif) est que cette instruction est plus courte de 4 octets que l’instruction mov eax,0.<br>
+Nous testons aussi l’instruction xor appliquée au même registre. Vous remarquez que tous les bits passent à zéro. Vous trouverez cette instruction dans de nombreux exemples de programmes pour initialiser un registre à zéro. L’interêt (tout relatif) est que cette instruction est plus courte de 4 octets que l’instruction mov eax,0. Nous pouvons l'utiliser pour mettre le code retour à 0 en fin de programme avec xor ebx,ebx<br>
 Nous verrons dans un autre chapitre d’autres instructions qui concernent des manipulations de bits mais nous allons voir d’abord l’affichage d’un registre en hexadécimal.
 
