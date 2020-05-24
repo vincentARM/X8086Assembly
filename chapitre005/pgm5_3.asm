@@ -1,5 +1,5 @@
 ; assembleur 32 bits Linux 
-; programme : pgm5.asm
+; programme : pgm5_3.asm
 ; affichage d'un registre 
 ; verification des push et des pop
 
@@ -70,7 +70,7 @@ main:
     call afficherMess
                          ; Fin standard du programme
     mov eax,EXIT         ; signalement de fin de programme
-    xor ebx,ebx          ; code retour du programme
+    mov ebx,0          ; code retour du programme
     int 0x80             ; interruption : retour à Linux
 ;************************************************************
 ;               Affichage chaine de caractères
