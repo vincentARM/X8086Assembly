@@ -1,16 +1,16 @@
 Ce premier chapitre concerne les outils à mettre en place, et l'écriture d'un programme assembleur minimum  afin de tester leur bonne installation.  <br>
-La saisie du source peut s'effectuer avec n'importe quel éditeur disponible sur Linux, du plus simple à l'atelier le plus complexe.Par exemple Geany sur Ubuntu.<br>
-En ce qui me concerne, j'ai installé notepad++ car cet éditeur bien que simple posséde des fonctions interessantes : coloration syntaxique, transferts, lancement de scripts etc.<br>
+La saisie du source peut s'effectuer avec n'importe quel éditeur disponible sur Linux, du plus simple à l'atelier le plus complexe. Par exemple Geany sur Ubuntu.<br>
+En ce qui me concerne, j'ai installé notepad++ car cet éditeur bien que simple possède des fonctions intéressantes : coloration syntaxique, transferts, lancement de scripts etc.<br>
 <br>
 Pour la compilation, j'ai implanté le compilateur nasm (et pas Masm compilateur Microsoft) avec le package nasm.
 Pour les informations, le forum etc. voir le site https://www.nasm.us/ et le manuel utilisateur en pdf : https://www.nasm.us/xdoc/2.14.02/nasmdoc.pdf.
-Après saisie, le programme source est sauvegardé abec l'extension .asm. <br>
+Après saisie, le programme source est sauvegardé avec l'extension .asm. <br>
 Le compilateur nasm peut être lancé dans une console (terminal) linux avec la commande : nasm -f elf <pgm>.asm avec <pgm> correspondant au nom du programme à compiler. Après compilation sans erreur, un module objet nommé <pgm>.o doit se trouver dans le même répertoire. <br> 
 Le compilateur a pour but de traduire les instructions compréhensibles aux humains, en langage machine compréhensible par le microprocesseur.<br>
-Vous pouvez regardez le résultat en ajoutant l'option −l <nom>.txt <br>  
+Vous pouvez regarder le résultat en ajoutant l'option −l <nom>.txt <br>  
 
 Pour l'éditeur de liens, j'ai utilisé le linker standard ld mais il est aussi possible d'utiliser gcc ou d'autres linkers.<br>
-L'éditeur ld est lancé avec la commande : ld -m elf_i386 <pgm>.o -o <pgm> -e main . Si aucune erreur n'est detectée, le programme executable <pgm> doit être présent dans le repertoire. <br>
+L'éditeur ld est lancé avec la commande : ld -m elf_i386 <pgm>.o -o <pgm> -e main . Si aucune erreur n'est détectée, le programme exécutable <pgm> doit être présent dans le répertoire. <br>
 
 Pour une première utilisation, j'ai crée un script qui lance la compilation et l'édition des liens en saississant le nom du script et le nom du programme sans l'extension par exemple compil32.sh pgm1_0.
 
