@@ -25,3 +25,5 @@ Remarque 2 : ce document est écrit au fur et à mesure directement sur Github e
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre007">Chapitre 7 : nombres négatifs et opérations arithmétiques.</a></h3>
 
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre008">Chapitre 8 : affichage binaire, opérations logiques, affichage hexadécimal, sous registres.</a></h3>
+
+<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre009">Chapitre 9 : insertion de fichiers source, fichiers objets et utilitaire make.</a></h3>
