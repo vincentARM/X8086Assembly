@@ -1,4 +1,4 @@
-Nos programmes deviennent de plus en plus importants avec l’insertion de nouvelles routines. De plus les routines d’affichages sont identiques d’un programme à l’autre.  Nous allons voir 3 manières de simplifier le programme maitre sans avoir à recopier chaque fois ces routines.<br>
+Nos programmes deviennent de plus en plus importants avec l’insertion de nouvelles routines. De plus les routines d’affichage sont identiques d’un programme à l’autre.  Nous allons voir 3 manières de simplifier le programme maitre sans avoir à recopier chaque fois ces routines.<br>
 La première méthode est de déplacer les routines dans un fichier source annexe et d’intégrer ce fichier avec la directive nasm : %include. Cette instruction va simplement recopier le fichier annexe pour l’iinsérer dans le corps du programme principal avant la compilation.<br>
 Dans le programme pgm9.asm, nous supprimons donc toutes les routines d’affichage et de conversion pour les mettre dans le fichier includeFonction.asm . Nous ajoutons aussi dans ce fichier, la macro, les constantes et les libellés. Puis dans le programme principal, nous mettons la directive : 
 <pre>
