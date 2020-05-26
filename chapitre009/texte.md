@@ -24,7 +24,8 @@ Dans le répertoire src, nous mettons le programme pgm9_2.src et le fichier anne
 La construction s’effectue simplement en tapant make.<br>
 Si pas d’erreur, nous pouvons exécuter le programme pgm9_2 qui se trouve dans le répertoire build.<br>
 L’inconvénient c’est que c’est lourd à mettre en place car il faut recréer toute la structure pour chaque nouveau programme. L’avantage c’est qu’il suffit de modifier ou d’ajouter un fichier source et de relancer make pour que les compilations nécessaires soient lancées.<br>
-Je vous laisse le soin de choisir la méthode qui vous convient le mieux. Personnellement compte tenu de la taille limité des programmes exemples, je vais opter pour la 2ième solution car je vais compiler le programme annexe des routines et le placer dans le répertoire supérieur de mes programmes. Ainsi il n’est présent qu’une fois et il sera accessible par le script de compilation quelque soit le sous répertoire où on lance ce script.
+Je vous laisse le soin de choisir la méthode qui vous convient le mieux. Personnellement compte tenu de la taille limitée des programmes exemples, je vais opter pour la 2ième solution car je vais compiler le programme annexe des routines et le placer dans le répertoire supérieur de mes programmes. Ainsi il n’est présent qu’une fois et il sera accessible par le script de compilation quelque soit le sous répertoire où on lance ce script.<br>
+Voici le contenu du nouveau script :
 <pre>
 echo Compilation 32 bits de $1
 #appel nasm
