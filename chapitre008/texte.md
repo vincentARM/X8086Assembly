@@ -29,9 +29,28 @@ Affichage -1
 Affichage registre en hexa : FFFFFFFF
 </pre>
 Nous voyons que la valeur -1 qui est aussi la valeur maximum d’un registre est affichée en FFFFFFFF, ce qui est plus lisible que les 32 bits en notation binaire. Maintenant si nous mettons la valeur 15 soit 0b1111 sur 4 bits nous voyons qu’elle est affichée F et la valeur maxi d’un octet (2 puissance 8 – 1) sera représenté par FF. <br>
+<pre>
+Affichage valeur maxi 4 bits
+Affichage registre en hexa : 0000000F
+Affichage registre en binaire : 00000000000000000000000000001111
+Affichage valeur maxi 16 bits
+Affichage registre en hexa : 0000FFFF
+Affichage registre en binaire : 00000000000000001111111111111111
+Affichage valeur maxi 8 bits
+Affichage registre en hexa : 000000FF
+Affichage registre en binaire : 00000000000000000000000011111111
+</pre>
 Nous pouvons donc traduire facilement les données binaires en données hexadécimales et nous pouvons examiner plus facilement les manipulations des 4 octets qui composent un registre. Pour des raisons historiques et pour assurer la compatibilité des programmes au fil des évolutions des processeurs, les 16 bits(soit 2 octets) de la partie basse d’un  registre comme eax peuvent être manipulés sous le nom ax. Par exemple pour mettre tous les bits à 1 il suffit de mettre la valeur 0xFFFF dans le registre ax avec l’instruction mov ax,0xFFFF et l’affichage du registre complet donnera :
-Et toujours pour des raisons historiques les 2 octets du registre ax peuvent être manipulés avec les nom ah pour l’octet du haut (h pour high en anglais) et al pour l’octet du bas ( l pour low en anglais). Par exemple nous pouvons mettre la valeur 0xFF dans le 2ième octet par mov ah,0xFF ce qui donne :
 
+
+Et toujours pour des raisons historiques les 2 octets du registre ax peuvent être manipulés avec les nom ah pour l’octet du haut (h pour high en anglais) et al pour l’octet du bas ( l pour low en anglais). Par exemple nous pouvons mettre la valeur 0xFF dans le 2ième octet par mov ah,0xFF ce qui donne :
+<pre>
+Affichage registre en hexa : 000000FF
+Affichage registre en binaire : 00000000000000000000000011111111
+Affichage valeur maxi 8 bits partie haute
+Affichage registre en hexa : 0000FF00
+Affichage registre en binaire : 00000000000000001111111100000000
+</pre>
 Il en est de même pour les registre ebx, ecx,edx qui se décomposent en bx,cx,dx qui eux-mêmes se décomposent en bh,bl,ch,cl,dh,dl. Ainsi nous pouvons  utiliser mov ah,bh ou inc cl ou même cmp dh,0. 
 Il faudrait aussi vérifier le mov ah,al et la possibilité des opérations arithmétiques avec les notions de dépassement et de retenues !
 Nous avons déjà vu l’utilisation de ses sous registres lors de la récupération et la mise à jour d’un caractère ASCII d’une donnée de la mémoire.
