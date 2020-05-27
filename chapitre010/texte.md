@@ -1,23 +1,33 @@
-Nous allons revenir sur des opérations sur des bits. Nous pouvons en plus des opérations logique ET,OU,OU EXCLISIF et NON, déplacer les bits dans un registre.
+Nous allons revenir sur des opérations sur des bits. Nous pouvons en plus des opérations logique ET,OU,OU EXCLISIF et NON, déplacer les bits dans un registre.<br>
 Dans le programme pgm10.asm, nous déplaçons les bits du registre eax de 5 positions sur la gauche avec l’instruction :
+<pre>
 Mov eax,0b11
 Shl eax,5
+</pre>
 Résultat :
+<pre>
 Instruction déplacement gauche
 Affichage registre en binaire : 00000000000000000000000001100000
+</pre>
 Vous voyez que les 2 bits à 1 ont été déplacés sur la gauche et  que le registre a été complété par des zéros.
 Puis nous les déplaçons de 3 positions sur la droite avec l’instruction :
+<pre>
 Shr eax,3.
+</pre>
 Résultat :
+<pre>
 Instruction déplacement droite valeur immédiate
 Affichage registre en binaire : 00000000000000000000000000001100
-Là aussi le registre a été complété par des zéros à gauche.
+</pre>
+Là aussi le registre a été complété par des zéros à gauche.<br>
 Quels sont les conséquences sur les valeurs si nous les affichons en décimal. Nous constatons que chaque déplacement d’une position sur la gauche revient à multiplier par 2 et que chaque déplacement sur la droite revient à une division par 2. Cela est intéressant car nous pouvons remplacer des multiplications et divisions par 2 qui sont couteuses en temps par des instructions plus simples.<br> 
 Voici le résultat pour un déplacement gauche de la valeur 5 :
+<pre>
 Instruction déplacement gauche = multiplication par 2
 Affichage registre en binaire : 00000000000000000000000000000101
 Affichage registre en binaire : 00000000000000000000000000001010
 Affichage décimal d'un registre : +10
+</pre>
 Et un déplacement de 3 positions à droite pour la valeur 1000 et qui correspond donc à une division par 8.
 Instruction déplacement droite de 3 = division par 8
 Affichage décimal d'un registre : +125
