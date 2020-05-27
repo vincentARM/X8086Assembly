@@ -21,6 +21,7 @@ Instruction déplacement droite valeur immédiate
 Affichage registre en binaire : 00000000000000000000000000001100
 </pre>
 Là aussi le registre a été complété par des zéros à gauche.<br>
+Les déplacements ont été indiqués par des valeurs immédiates mais il est possible d'utiliser uniquement le registre cl (partie basse d'un octet du registre ecx) pour indiquer le déplacement à effectuer. <br>
 Quels sont les conséquences sur les valeurs si nous les affichons en décimal. Nous constatons que chaque déplacement d’une position sur la gauche revient à multiplier par 2 et que chaque déplacement sur la droite revient à une division par 2. Cela est intéressant car nous pouvons remplacer des multiplications et divisions par 2 qui sont couteuses en temps par des instructions plus simples.<br> 
 Voici le résultat pour un déplacement gauche de la valeur 5 :
 <pre>
