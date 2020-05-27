@@ -1,4 +1,5 @@
 Nous allons revenir sur des opérations sur des bits. Nous pouvons en plus des opérations logique ET,OU,OU EXCLUSIF et NON, déplacer les bits dans un registre.<br>
+REMARQUE : à partir de ce chapitre, les routines d'affichage sont déportées dans le fichier routines.asm, compilées séparement. Le fichier objet de ces routines sera linké avec les programmes exemples. <br>
 Dans le programme pgm10.asm, nous déplaçons les bits du registre eax de 5 positions sur la gauche avec l’instruction :
 <pre>
 Mov eax,0b11
