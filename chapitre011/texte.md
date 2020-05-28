@@ -33,11 +33,14 @@ A partir de ces indicateurs, l’assembleur offre une panoplie de sauts conditio
 Par exemple vous disposez pour tester si un registre est supérieur à un autre de 2 instructions ja et jg
 Ja doit être utilisée quand vous considérez comme des valeurs non signées (et dans ce cas la valeur -1 est plus grande que 1.
 Jg doit être utilisée pour les valeurs signées (et dans ce cas -1 est plus petit que 1)
-Voici les résultats.
+Voici les résultats :
+<pre>
 Comparaison eax=-1,ebx=1
 eax plus grand
 eax plus petit
-Liste des sauts conditionnels pour valeurs non signées :
+</pre>
+<br>
+<B>Liste des sauts conditionnels pour valeurs non signées :</b> <br>
 Ja        si supérieur
 Jae   si supérieur ou égal
 Jna   si pas supérieur
@@ -47,7 +50,7 @@ Jbe    si inférieur ou égal
 Jnb   si pas inférieur
 Jnbe  si ni inférieur ni égal
 
-Liste des sauts conditionnels pour valeurs  signées :
+<b>Liste des sauts conditionnels pour valeurs  signées :<b><br>
 Jg        si supérieur
 Jge   si supérieur ou égal
 Jng si pas supérieur
@@ -57,7 +60,7 @@ Jle    si inférieur ou égal
 Jnl si pas inférieur
 Jnle si ni inférieur ni égal
 
-Liste des sauts conditionnels indifférents au signe :
+<b>Liste des sauts conditionnels indifférents au signe :<B><br>
 Je    si égal
 Jne  si différent
 Jo    si débordement (overflow)
@@ -71,9 +74,9 @@ Jns si positif
 Jz si égal à zéro
 Jnz si différent de zéro
 
-Autres saut conditionnels :
+<b>Autres saut conditionnels : <b> <br>
 Jcxz    si cx = zéro
 Jecxz   si ecx = zéro
-
-Dans le programme exemple, je n’ai pas testé tous ces cas !! je me suis contenté de tester le cas du registre cx à zéro. L’instruction jecxz peut servir d’arrêt dans une boucle qui décrémente le registre ecx.
+<br>
+Dans le programme exemple, je n’ai pas testé tous ces cas !! je me suis contenté de tester le cas du registre cx à zéro. L’instruction jecxz peut servir d’arrêt dans une boucle qui décrémente le registre ecx.<br>
 Comme exercice, vous pouvez  tester d’autres sauts en fonction des valeurs mises dans 2 registres.
