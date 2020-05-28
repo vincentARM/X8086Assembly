@@ -19,14 +19,14 @@ Valeur négative
 Affichage des indicateurs :
 Zéro : 0 Signe : 1 Carry : 1 Overflow : 0 Parité : 1
 </pre>
-L’indicateur de signe est passé à 1 mais aussi l’indicateur de carry. En effet cela est important de savoir en arithmétique non signée qu’il y a un problème.
+L’indicateur de zéro est revenu à zéro celui du signe est passé à 1 mais aussi l’indicateur de carry. En effet cela est important de savoir en arithmétique non signée qu’il y a un problème.
 Comme – 1 est  aussi la représentation de la valeur maximum d’un registre, effectuons la multiplication non signée de eax par eax et affichons les indicateurs :
 <pre>
 Multiplication non signee
 Affichage des indicateurs :
 Zéro : 0 Signe : 1 Carry : 1 Overflow : 1 Parité : 1
 </pre>
-L’indicateur overflow est lui aussi passé à un puisque la multiplication déborde d’un seul registre.
+L’indicateur overflow est lui aussi passé à un puisque la multiplication déborde d’un seul registre.<br><br>
 Ensuite nous effectuons plusieurs comparaisons signées ou non signées pour voir les indicateurs mis en place. En fait une comparaison est une soustraction sans mise à jour du résultat, seul les indicateurs sont mis en place.<br>
 Vous pouvez le constater avec la comparaison cmp eax,5. Si eax contient 5, cette comparaison est vraie et vous pouvez utiliser les instructions je ou jne pour continuer mais vous pouvez aussi utiliser jz ou jnz  car la comparaison étant équivalente à une soustraction, le résultat théorique est zéro et donc l’indicateur zéro est positionné.<br>
 A partir de ces indicateurs, l’assembleur offre une panoplie de sauts conditionnels qui va vous permettre d’obtenir toutes les conditions possibles. Mais attention comme vous l’avez vu, il faudra choisir les bons sauts en fonction de l’état signé ou non signée du registre.<br>
