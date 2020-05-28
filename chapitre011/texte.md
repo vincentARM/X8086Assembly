@@ -41,42 +41,44 @@ eax plus petit
 </pre>
 <br>
 <B>Liste des sauts conditionnels pour valeurs non signées :</b> <br>
-Ja        si supérieur
-Jae   si supérieur ou égal
-Jna   si pas supérieur
-Jnae  si ni supérieur ni égal
-Jb      si inférieur
-Jbe    si inférieur ou égal
-Jnb   si pas inférieur
-Jnbe  si ni inférieur ni égal
+Ja     si supérieur<br>
+Jae    si supérieur ou égal<br>
+Jna    si pas supérieur<br>
+Jnae   si ni supérieur ni égal<br>
+Jb     si inférieur<br>
+Jbe    si inférieur ou égal<br>
+Jnb    si pas inférieur<br>
+Jnbe   si ni inférieur ni égal<br>
 
 <b>Liste des sauts conditionnels pour valeurs  signées :<b><br>
-Jg        si supérieur
-Jge   si supérieur ou égal
-Jng si pas supérieur
-Jnge  si ni supérieur ni égal
-Jl      si inférieur
-Jle    si inférieur ou égal
-Jnl si pas inférieur
-Jnle si ni inférieur ni égal
+Jg      si supérieur<br>
+Jge     si supérieur ou égal<br>
+Jng     si pas supérieur<br>
+Jnge    si ni supérieur ni égal<br>
+Jl      si inférieur<br>
+Jle     si inférieur ou égal<br>
+Jnl     si pas inférieur<br>
+Jnle    si ni inférieur ni égal<br>
 
 <b>Liste des sauts conditionnels indifférents au signe :<B><br>
-Je    si égal
-Jne  si différent
-Jo    si débordement (overflow)
-Jno  si pas de débordement 
-Jp  si nombre pair de bit 1
-Jnp si nombre impar de bit 1
-Jpe si parité paire
-Jpo si parité impaire
-Js   si négatif
-Jns si positif
-Jz si égal à zéro
-Jnz si différent de zéro
+Je    si égal <br>
+Jne   si différent <br>
+Jo    si débordement (overflow) <br>
+Jno   si pas de débordement <br>
+Jp    si nombre pair de bit 1<br>
+Jnp   si nombre impar de bit 1<br>
+Jpe   si parité paire<br>
+Jpo   si parité impaire<br>
+jc    si retenue (carry)<br>
+jnc   si pas de retenue<br>
+Js    si négatif<br>
+Jns   si positif<br>
+Jz    si égal à zéro<br>
+Jnz   si différent de zéro<br>
 
-<b>Autres saut conditionnels : <b> <br>
-Jcxz    si cx = zéro
-Jecxz   si ecx = zéro
+<b>Autres saut conditionnels : </b> <br>
+Jcxz    si cx = zéro <br>
+Jecxz   si ecx = zéro <br>
 <br>
 Dans le programme exemple, je n’ai pas testé tous ces cas !! je me suis contenté de tester le cas du registre cx à zéro. L’instruction jecxz peut servir d’arrêt dans une boucle qui décrémente le registre ecx.<br>
 Comme exercice, vous pouvez  tester d’autres sauts en fonction des valeurs mises dans 2 registres.
