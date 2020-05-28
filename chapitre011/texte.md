@@ -50,7 +50,7 @@ Jbe    si inférieur ou égal<br>
 Jnb    si pas inférieur<br>
 Jnbe   si ni inférieur ni égal<br>
 
-<b>Liste des sauts conditionnels pour valeurs  signées :<b><br>
+<b>Liste des sauts conditionnels pour valeurs  signées :</b><br>
 Jg      si supérieur<br>
 Jge     si supérieur ou égal<br>
 Jng     si pas supérieur<br>
@@ -60,7 +60,7 @@ Jle     si inférieur ou égal<br>
 Jnl     si pas inférieur<br>
 Jnle    si ni inférieur ni égal<br>
 
-<b>Liste des sauts conditionnels indifférents au signe :<B><br>
+<b>Liste des sauts conditionnels indifférents au signe :</B><br>
 Je    si égal <br>
 Jne   si différent <br>
 Jo    si débordement (overflow) <br>
