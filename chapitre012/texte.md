@@ -1,4 +1,4 @@
-Nous avons vu dès les premiers chapitres l’organisation de la zone mémoire allouée à notre programme par le système d’exploitation. Elle est découpée en section : .data .bss .text , chacune ayant une définition et un accès particulier. A ces sections il faut ajouter la zone dédiée à la pile et la zone dédiée au ras (heap) : à voir dans un autre chapitre.<br>
+Nous avons vu dès les premiers chapitres l’organisation de la zone mémoire allouée à notre programme par le système d’exploitation. Elle est découpée en section : .data .bss .text , chacune ayant une définition et un accès particulier. A ces sections il faut ajouter la zone dédiée à la pile et la zone dédiée au tas (heap) : à voir dans un autre chapitre.<br>
 Nous avons aussi commencé à voir quelques instructions pour mettre un caractère d’un registre dans une zone mémoire et inversement.
 Pour définir une zone mémoire contenant une chaine de caractères, il faut utiliser la pseudo instruction db pour data byte comme ceci :
 <pre>
@@ -17,9 +17,9 @@ Pour définir des valeurs de 2 octets il faut utiliser dw, pour des valeurs de 4
 Pour réserver de la place pour une variable, il faut utiliser resb  pour réserver des octets, resw pour réserver des mots de 2 octets, resd pour réserver des doubles mots de 4 octets et resq des quadruples mots de 8 octets.<br>
 Par exemple :  
 <pre>
-zone1 :    resb  10        ; reserve 10 octets en mémoire
-                          Zone2 :     resd 50      ; réserve 50 double mots de 4 octets.
-                          </pre>
+Zone1 :     resb 10      ; reserve 10 octets en mémoire
+Zone2 :     resd 50      ; réserve 50 double mots de 4 octets.
+ </pre>
 Pour lire un octet de la mémoire et le mettre dans un registre il faut utiliser l’instruction mov byte eax,[label] , le nom de la zone étant mis entre crochet.
 Donc il est possible de faire :
 <pre>
@@ -69,10 +69,12 @@ Affichage registre en hexa : 12345612
 Affichage registre en hexa : 00000012
 </pre>
 Le premier affichage ne correspond pas vraiment à un octet !! Mais oui c’est bien sûr, nous avons oublié d’initialiser à zéro le registre eax avant de récupérer l’octet dans la partie al. Après l’initialisation tout est correct et nous récupérons la valeur 12 qui est bien la valeur stockée dans le 4ième octet de la zone en mémoire.<br>
-Nous venons de voir des lectures mémoire en partant d’une adresse donnée par un label, mais nous pouvons aussi lire la mémoire à partir d’une adresse stockée dans un registre. Puis lire une valeur avec une adresse contenue dans un registre + un déplacement. Vous remarquerez que la syntaxe des instructions est différente. Le déplacement peu aussi être négatif et il peut être aussi stocké dans un registre. C’est ce que nous avons fait dans la routine d’affichage mémoire.
+Nous venons de voir des lectures mémoire en partant d’une adresse donnée par un label, mais nous pouvons aussi lire la mémoire à partir d’une adresse stockée dans un registre. Puis lire une valeur avec une adresse contenue dans un registre + un déplacement. Vous remarquerez que la syntaxe des instructions est différente. Le déplacement peu aussi être négatif et il peut être aussi stocké dans un registre. C’est ce que nous avons fait dans la routine d’affichage mémoire.<br>
 Tiens, essayons d’afficher l’adresse zéro !! en la mettant dans le registre eax. La sanction est immédiate : 
+  <pre>
 Erreur de segmentation (core dumped)
-En effet, Linux surveille et vous interdit l’accès à toutes les adresses hors de la plage allouée à votre programme et heureusement car sinon bonjour les dégâts !!
+</pre>
+En effet, Linux surveille et vous interdit l’accès à toutes les adresses hors de la plage allouée à votre programme et heureusement car sinon bonjour les dégâts !! <br>
 D’ailleurs, lorsque vous aurez cette erreur, le plus souvent elle aura pour origine que  le registre contenant l’adresse  contient zéro un ou nombre quelconque ne correspond pas à une adresse effective.<br>
 Voyons maintenant l’écriture dans une zone de mémoire. Nous avons vu déjà le stockage d’un octet dans les routines d’affichage précédentes. Pour stocker un mot et un double mot réservons de la place dans la section bss avec les instructions resw et resd.<br>
 Ensuite nous mettons la valeur 0x1234 dans le registre eax et nous stockons les 2 octets dans la zone bss wZoneEcr1 et nous effectuons un affichage de la mémoire à partir de cette zone.
