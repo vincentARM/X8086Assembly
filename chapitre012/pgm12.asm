@@ -125,6 +125,14 @@ main:
     push 2                ; nombre de blocs à afficher
     call afficherMemoire
 
+    ; test de l'intruction xlat
+    afficherLib "test instruction xlat."
+    mov ebx,dZone2         ; adresse de la zone
+    mov eax,3              ; déplacement demandé
+    xlat                   ; met dans al l'octet de la zone dZone2 + deplacement de 3
+    push eax
+    call afficherReg16
+
 
 
     push szMessFinPgm
