@@ -97,4 +97,8 @@ Vidage memoire adresse : 0804966E
     </pre>
 Nous voyons après les 16 octets de la zone zdec, les messages de la .data du programme routines.asm.
 Nous terminons le programme en stockant un double mot de 4 octets cad la valeur d’un registre complet. Cette instruction sera très utilisée puisque elle conserve la valeur d’un registre en mémoire.<br>
-Tout comme la lecture il existe pour le stockage les mêmes possibilités pour accéder à la mémoire : à partir d’un label avec ou sans déplacement, à partir d’un registre avec ou sans déplacement, et même avec des opérations plus complexes (voir la documentation nasm).
+Tout comme la lecture il existe pour le stockage les mêmes possibilités pour accéder à la mémoire : à partir d’un label avec ou sans déplacement, à partir d’un registre avec ou sans déplacement, et même avec des opérations plus complexes (voir la documentation nasm).<br>
+ Nous terminons ce programme en testant l'instruction xlat car je me demandais ce qu'elle faisait exactement. Donc il faut mettre une adresse mémoire dans ebx, un déplacement dans eax (ou plus exactement dans al) et l'instruction met dans le registre al, la valeur l'octet situé à l'adresse contenue dans ebx + le déplacement contenu dans eax. <br>
+ J'ignore encore à quoi peut servir cette instruction !!!
+ 
+ 
