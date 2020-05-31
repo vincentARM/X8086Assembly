@@ -8,7 +8,7 @@ Dans la data du programme pgm13.asm, nous décrivons un tableau de valeurs enti�
 <pre>
 NBPOSTE equ ($ - tabdExp) / 4
 </pre>
-Qui signifie que la constante NBPOSTE est équivalente à l’adresse actuelle (le $) – l’adresse du début du tableau (tabdExp) divisé par le nombre d’octet de chaque valeur (4). 
+Qui signifie que la constante NBPOSTE est équivalente à l’adresse actuelle (le $) – l’adresse du début du tableau (tabdExp) divisé par le nombre d’octet de chaque valeur (4). <br>
 Maintenant recherchons la valeur se trouvant au poste N° 3 . Le premier poste se trouve à l’adresse du tableau, le deuxième poste se trouve à l’adresse du tableau + 1 fois 4 octets et le 3ième poste se trouve à l’adresse du tableau + 2 fois 4 octets, ce qui donne l’instruction 
 <pre>
 mov eax,[esi+(2 * 4)]
