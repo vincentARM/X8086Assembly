@@ -31,3 +31,5 @@ Remarque 2 : ce document est écrit au fur et à mesure directement sur Github e
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 : instructions de déplacement et de test de bits.</a></h3>
 
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre011">Chapitre 11 : le registre des indicateurs (Flags) et les sauts contitionnels.</a></h3>
+
+<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre012">Chapitre 12 : les accès à la mémoire, affichage des zones mémoire.</a></h3>
