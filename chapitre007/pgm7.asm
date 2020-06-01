@@ -201,7 +201,7 @@ afficherReg:
     call afficherMess
     ;pop eax              ; restaur des registres
     leave                ; epilogue
-    ret
+    ret 4
 ;************************************************************
 ;           affichage d'un registre en décimal
 ;************************************************************
@@ -221,7 +221,7 @@ afficherReg10S:
     call afficherMess
     ;pop eax              ; restaur des registres
     leave                ; epilogue
-    ret
+    ret 4
 ;************************************************************
 ;           conversion registre en chaine décimale
 ;************************************************************
