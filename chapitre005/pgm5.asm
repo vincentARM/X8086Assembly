@@ -108,7 +108,7 @@ afficherReg:
     call afficherMess
     pop eax              ; restaur des registres
     leave                ; epilogue
-    ret
+    ret 4
 ;************************************************************
 ;           conversion registre en chaine décimale
 ;************************************************************
