@@ -93,9 +93,9 @@ afficherReg:
     call afficherMess
     pop eax              ; restaur registre
     leave                ; epilogue
-    ret
+    ret 4
 ;************************************************************
-;           affichage d'un registre en décimal
+;           affichage d'un registre en décimal signé
 ;************************************************************
 ; le paramètre 1 contient la valeur à convertir
 afficherReg10S:
@@ -113,7 +113,7 @@ afficherReg10S:
     call afficherMess
     pop eax              ; restaur du registre
     leave                ; epilogue
-    ret
+    ret 4
 ;************************************************************
 ;           affichage d'un registre en binaire
 ;************************************************************
@@ -133,7 +133,7 @@ afficherBinaire:
     call afficherMess
     pop eax              ; restaur registre
     leave                ; epilogue
-    ret
+    ret 4
 ;************************************************************
 ;           conversion registre en chaine décimale
 ;************************************************************
@@ -289,7 +289,7 @@ afficherReg16:
     call afficherMess
     pop eax               ; restaur des registres
     leave               ; epilogue
-    ret
+    ret 4
 ;************************************************************
 ;           conversion registre en chaine hexadecimal
 ;************************************************************
