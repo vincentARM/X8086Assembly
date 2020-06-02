@@ -133,7 +133,12 @@ main:
     push eax
     call afficherReg16
 
-
+    ; test données en fin de code
+    mov eax,[szDonCode]
+    push eax
+    call afficherReg16
+    mov eax,0x11111111
+    ;mov [szDonCode],eax    ; interdit pas de modification dans section code
 
     push szMessFinPgm
     call afficherMess
@@ -142,7 +147,7 @@ main:
     xor ebx,ebx          ; code retour du programme
     int 0x80             ; interruption : retour à Linux
 
-
+szDonCode:          dd 0x87654321 
 ;************************************************************
 ;               affichage de la mémoire
 ;************************************************************
