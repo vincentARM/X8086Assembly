@@ -50,11 +50,15 @@ Vous remarquerez que hormis les commentaires, toutes ces instructions sont impor
 <br>
 Voir la liste de toutes les instructions possibles dans la documentation de nasm ou sur internet une liste réduite sur Wikipedia ou une liste plus complète sur https://www.gladir.com/CODER/ASM8086/index.htm <br>
 <br>
-La documentation complète sur les processeurs Intel est disponible en recherchant ces documentss sur Internet :
-•	IA-32 Intel® Architecture Software Developer’s Manual Volume 1: Basic Architecture
-•	IA-32 Intel® Architecture Software Developer’s Manual Volume 2A: Instruction Set Reference, A-M
-•	IA-32 Intel® Architecture Software Developer’s Manual Volume 2B: Instruction Set Reference, N-Z
-•	IA-32 Intel® Architecture Software Developer’s Manual Volume 3: System Programming Guide
+La documentation complète sur les processeurs Intel est disponible en recherchant ces documents sur Internet :<br>
+•	IA-32 Intel® Architecture Software Developer’s Manual Volume 1: Basic Architecture<br>
+https://ensiwiki.ensimag.fr/images/3/36/Pentium_-_1_-_Architecture.pdf
+•	IA-32 Intel® Architecture Software Developer’s Manual Volume 2A: Instruction Set Reference, A-M<br>
+https://ensiwiki.ensimag.fr/images/2/27/Pentium_-_2_-_Instructions_A-M.pdf
+•	IA-32 Intel® Architecture Software Developer’s Manual Volume 2B: Instruction Set Reference, N-Z<br>
+https://ensiwiki.ensimag.fr/images/e/e4/Pentium_-_2_-_Instructions_N-Z.pdf
+•	IA-32 Intel® Architecture Software Developer’s Manual Volume 3: System Programming Guide<br>
+https://ensiwiki.ensimag.fr/images/a/a9/Pentium_-_3_-_Systeme.pdf
 <br>
 Bonne lecture car c'est plus de 2000 pages en anglaismais vous saurez tout sur les processeurs. <br>
 
