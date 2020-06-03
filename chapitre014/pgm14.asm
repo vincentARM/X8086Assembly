@@ -48,10 +48,7 @@ sValDetEBP:    db "00000000  ",10,0
 ; Variables non initialisees segment 
 ;************************************************************
 section .bss
-szChaine2:           resb  100  ; réserve 100 octets
-szChaine3:           resb  100  ; réserve 100 octets
-szChaine4:           resb  100  ; réserve 100 octets
-dZoneEcr2:           resd  1    ; réserve 1 double mot de 4 octets
+
 ;************************************************************
 ; Code segment 
 ;************************************************************
