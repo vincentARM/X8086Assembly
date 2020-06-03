@@ -49,6 +49,14 @@ ld : avertissement : le symbole d'entrée main est introuvable ; utilise par 
 Vous remarquerez que hormis les commentaires, toutes ces instructions sont importantes pour le bon fonctionnement du programme.
 <br>
 Voir la liste de toutes les instructions possibles dans la documentation de nasm ou sur internet une liste réduite sur Wikipedia ou une liste plus complète sur https://www.gladir.com/CODER/ASM8086/index.htm <br>
+<br>
+La documentation complète sur les processeurs Intel est disponible en recherchant ces documentss sur Internet :
+•	IA-32 Intel® Architecture Software Developer’s Manual Volume 1: Basic Architecture
+•	IA-32 Intel® Architecture Software Developer’s Manual Volume 2A: Instruction Set Reference, A-M
+•	IA-32 Intel® Architecture Software Developer’s Manual Volume 2B: Instruction Set Reference, N-Z
+•	IA-32 Intel® Architecture Software Developer’s Manual Volume 3: System Programming Guide
+<br>
+Bonne lecture car c'est plus de 2000 pages en anglaismais vous saurez tout sur les processeurs. <br>
 
 
 
