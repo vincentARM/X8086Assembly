@@ -60,7 +60,7 @@ https://ensiwiki.ensimag.fr/images/e/e4/Pentium_-_2_-_Instructions_N-Z.pdf <br>
 •	IA-32 Intel® Architecture Software Developer’s Manual Volume 3: System Programming Guide<br>
 https://ensiwiki.ensimag.fr/images/a/a9/Pentium_-_3_-_Systeme.pdf <br>
 <br>
-Bonne lecture car c'est plus de 2000 pages en anglaismais vous saurez tout sur les processeurs. <br>
+Bonne lecture car c'est plus de 2000 pages en anglais mais vous saurez tout sur les processeurs. <br>
 
 
 
