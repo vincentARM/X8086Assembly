@@ -51,7 +51,7 @@ Vous remarquerez que hormis les commentaires, toutes ces instructions sont impor
 Voir la liste de toutes les instructions possibles dans la documentation de nasm ou sur internet une liste réduite sur Wikipedia ou une liste plus complète sur https://www.gladir.com/CODER/ASM8086/index.htm <br>
 <br>
 La documentation complète sur les processeurs Intel est disponible sur Internet :<br>
-https://software.intel.com/content/www/us/en/develop/articles/intel-sdm.html#three-volume
+https://software.intel.com/content/www/us/en/develop/articles/intel-sdm.html#three-volume <br>
 Je vous conseille les volumes 1 et 2.<br>
 
 Bonne lecture car c'est plus de 2000 pages en anglais mais vous saurez tout sur les processeurs. <br>
