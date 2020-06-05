@@ -16,7 +16,7 @@ Vidage memoire adresse : 08049880
 080498B0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  "????????????????"
 Affichage décimal d'un registre : 22
 </pre>
-Je retrouve bien les lignes saisies dans mon fichier. Chaque fin de ligne est indiquée par le caractère 0xA. A la fin il y a 2 caractères 0xA qui se suivent car j’ai terminé le fichier avec une ligne vide. Donc là, nous ne voyons pas très bien s’il y a un zéro final.<br>
+Je retrouve bien les lignes saisies dans mon fichier. Chaque fin de ligne est indiquée par le caractère 0xA. A la fin il y a 2 caractères 0xA qui se suivent car j’ai terminé le fichier avec une ligne vide. Donc là, nous ne voyons pas très bien s’il y a un zéro final. (remarque : j'ai vérifié et il n'y a pas de zéro final!!)<br>
 Le registre eax contient exactement le nombre de caractères lus, ce qui sera bien utilie quand il faudra exploiter cette lecture. <br>
 Maintenant voyons l’écriture dans un fichier dans le programme pgm16_1.asm. Nous décrivons dans la section .data une zone szBuffer qui contient les lignes à écrire et terminée par 0 binaire. <br>
 Dans le code, nous pouvons pour créer le fichier procéder de 2 façons : utiliser l’appel système CREAT (code 8) ou l’appel système OPEN avec une option particulière. Ici nous allons utiliser CREAT et dans le programme pgm16_2.asm nous utiliserons OPEN.<br>
