@@ -41,3 +41,5 @@ Remarque 2 : ce document est écrit au fur et à mesure directement sur Github e
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre015">Chapitre 15 : Saisie de données,conversion chaine de caractères en entier signé.</a></h3>
 
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre016">Chapitre 16 : Lecture d'un fichier, écriture dans un fichier.</a></h3>
+
+<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre017">Chapitre 17 : Retour sur les opérations mémoire, structures, tableau de chaines de caractères.</a></h3>
