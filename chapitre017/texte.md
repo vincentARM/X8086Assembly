@@ -37,11 +37,13 @@ Dans le code pour accéder à la valeur 5 avec la définition de la structure en
 <pre>
 mov esi,stZone1
     mov al,[esi+enreg1.valeur1]
-<pre>
+</pre>
 Et pour l’accès à la deuxième zone  qui est un double mot 
+<pre>
     mov eax,[esi+enreg1.valeur2]
+    </pre>
 Et nous pouvons afficher la 3ième zone 
-Les définitions de structures peuvent être utilisées pour passer en paramètre plusieurs zones de nature différentes à une routine. 
+Les définitions de structures peuvent être utilisées pour passer en paramètre plusieurs zones de nature différentes à une routine. <br><br>
 
 Dans le programme pgm17_1.asm, nous allons voir l’ utilisation d’ un tableau de chaines de caractères.Le programme est un peu plus complexe que les routines précédentes car nous allons effectuer une boucle de saisie de chains au clavier en utilisant la routine lireClavier. Les chaines saisies sont stockèes dans une zone unique à la queue-leu-leu et chacune séparée par le 0 final. Nous conservons l’adresse du début de chaque chaine dans un pointeur qui sera stocké dans un tableau.<br>
 Mais la chaine saisie sera comparée aux autres chaines déjà saisies pour que son pointeur soit inséré au bon endroit dans le tableau. Si la chaine s’avère être plus petite (plus exactement inférieure du point de vue lexical) son pointeur sera inséré avant le pointeur de la chaine lue. Et pour effectuer cette insertion, il faudra déplacer tous les pointeurs suivants d’une position vers le haut du tableau.<br>
