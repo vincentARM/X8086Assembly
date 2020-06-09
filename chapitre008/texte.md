@@ -11,6 +11,7 @@ Affichage registre en binaire : 11111111111111111111111111111111
 2puissance 32 -1
 Affichage registre en binaire : 11111111111111111111111111111111
 </pre>
+L'affichage de la valeur 1 s'effectue tout à fait à droite. En effet la numérotation des bits va de la droite vers la gauche de la position 0 à la position 31. Les bits à droite sont appelés des bits de poids faibles et ceux de gauche des bits de poids forts.<br>
 Vous voyez que la valeur -1 et la valeur maxi sont identiques et que tous les bits qui les composent sont à 1.
 Ensuite nous mettons la valeur binaire 0011 dans le registre eax en la codant 0b0011 pour la différencier d’une valeur décimale. Nous mettons la valeur 0b0101 dans le registre ebx et nous exécutons l’instruction  ET logique : and eax,ebx. Voici le résultat :
 <pre>
