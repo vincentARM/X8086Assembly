@@ -54,7 +54,7 @@ Ensuite, nous trouvons bien à la fin de chaque message les codes 0A (10 en déc
 Maintenant nous pouvons initialiser des caractères, des mots de 16 bits et des doubles mots de 32 bits pour voir leur stockage en mémoire.<br>
 Et c’est curieux les données numériques sont stockées à l’envers : pour un mot la valeur 1234 est stockée sous la forme 3412 et pour le double mot la valeur 12345678 est stockée 78563412. <br>
 Après une recherche sur Internet, il s’avère que les processeurs peuvent stocker les valeurs sous 2 formats différents : big endian et little endian. En français il s’agit du gros-boutiste et du petit-boutiste !! Je vous laisse le soin d’aller voir sur Wikipèdia l’explication amusante de ces noms. <br>
-En clair, le format gros-boutiste commencent par stocker les octets de poids forts (bits 24 à 31 puis bits 16 à 23) avant les octets de poids faibles (bits 8 à 15 puis bits 0 à 7). Le petit-boutiste fait l’inverse. Donc ici avec Linux Ubuntu nous avons un format gros-boutiste.
+En clair, le format gros-boutiste commencent par stocker les octets de poids forts (bits 24 à 31 puis bits 16 à 23) avant les octets de poids faibles (bits 8 à 15 puis bits 0 à 7). Le petit-boutiste fait l’inverse. Donc ici avec Linux Ubuntu nous avons un format petit-boutiste. L'octet de poids faible qui contient 78 est stocké en premier cad à l'adresse mémoire la plus basse.<br> 
 Mais voyons ce que nous avons dans un registre après lecture d’un mot et d’un double mot. 
   <pre>
 Affichage registre en hexa : 12345678
