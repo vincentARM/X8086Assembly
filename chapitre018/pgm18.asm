@@ -127,7 +127,9 @@ routine2:
 ;************************************************************
 ; paramètre1  : 
 routine3:
-    enter 8,0                 ; réserve 8 octets sur la pile
+%define var1 ebp-4            ; definit le nom de la zone 1
+%define var2 ebp-8            ; definit le nom de la zone 2
+    enter 8,0                 ; réserve 8 octets sur la pile pour les 2 zones
     push ebx                  ;sauvegarde des registres
     push ecx
     push edx
@@ -137,6 +139,8 @@ routine3:
     mov ebx,[ebp]             ; recup pile de base routine 1
     mov ecx,[ebx+8]           ; recup parametre 1 passé à routine 1
     add eax,ecx
+    mov [var1],eax            ; stocke eax dans la zone 1
+    mov dword[var2],64        ; stocke 64 (0x40) dans la zone 2
     push eax
     call afficherReg
     call afficherPiles
