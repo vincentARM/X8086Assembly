@@ -47,3 +47,5 @@ Remarque 2 : ce document est écrit au fur et à mesure directement sur Github e
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre018">Chapitre 18 : Retour sur les piles, variables locales sur la pile, appel de fonctions du langage C.</a></h3>
 
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre019">Chapitre 19 : les sélecteurs de segments.</a></h3>
+
+<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre020">Chapitre 20 : Affichage de tous les registres. .</a></h3>
