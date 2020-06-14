@@ -4,9 +4,9 @@ Seul petit problème : nous n’avons aucune instruction en assembleur pour conv
 Après lecture du chapitre 8 du volume 1 de la documentation Intel et la lecture du manuel de Nasm, je me lance dans le programme pgm21.asm dans la découverte des instructions pour effectuer les premiers calculs. <br>
 Tout d’abord, dans la .data, nous déclarons quelques nombres  pour voir les formats de Nasm : déjà la virgule française est remplacée par le point américain !! La déclaration se fait avec l’instruction dd pour les nombres en simple précision comme pour les entiers et avec dq pour les nombres en double précision. C’est le point qui détermine la nature du nombre entier ou virgule flottante.<br>
 Dans le code, j’essaye d’afficher avec printf le premier nombre sur 4 octets. Impossible d’y arriver !! mais l’affichage du deuxième nombre en double précision en passant 2 fois 4 octets sur la pile fonctionne. La recherche sur Internet montre que printf ne peut pas afficher des nombres e simple précision . Il faut les convertir en double précision pour les afficher. Donc il est inutile de manipuler des nombres en simple précision dans nos programmes de calcul. Autant les déclarer sur 8 octets avec dq. <br>
-Deuxième découverte : bien que 8 registres de 64 bits servent pour les calculs, ils ne sont pas accessibles avec des noms comme les registres eax,ebx etc. Ils sont organisés sous forme d’une pile et les instructions possibles effectuent des empilements et des dépilements successifs : il va falloir sérieusement réfléchir pour utiliser cette pile.<br>
+Deuxième découverte : bien que 8 registres de 64 bits servent pour les calculs, ils ne sont pas accessibles avec des noms comme les registres eax,ebx etc (rectificatif : ils peuvent être manipulés par certaines instructions avec les noms st0 à st7). Ils sont organisés sous forme d’une pile et les instructions possibles effectuent des empilements et des dépilements successifs : il va falloir sérieusement réfléchir pour utiliser cette pile.<br>
 Si nous commençons à charger un premier nombre de la mémoire dans la pile avec l’instruction <pre> fld dword[fNombre1]</pre> celui çi va être stocké dans le premier registre de la pile qui s’appelle st0. Si nous chargeons un deuxième nombre, le registre du premier nombre va s’appeler st1 et le nouveau nombre sera stockée dans le registre st0 et ainsi de suite.<br>
-Puis si nous effectuons l’opération inverse cad stockage en mémoire du nombre contenu dans st0 avec l’instruction <pre> fstp qword[fqNombre3]</pre>, (notez le p derrière fst pour pop) , st0 sera dépilé et st1 deviendra le registre st0. Vous remarquez que les instructions fld et fst ne mentionne aucun registre car c’est toujours le registre st0 qui est utilisé.
+Puis si nous effectuons l’opération inverse cad stockage en mémoire du nombre contenu dans st0 avec l’instruction <pre> fstp qword[fqNombre3]</pre>, (notez le p derrière fst pour pop) , st0 sera dépilé et st1 deviendra le registre st0. Vous remarquez que les instructions fld et fst ne mentionnent aucun registre car c’est toujours le registre st0 qui est utilisé.<br>
 Pour l’affichage par printf, rappelez vous ce que nous avons vu au chapitre 18, les paramètres doivent être placés dans l’ordre inverse et il faut réaligner la pile après l’appel. <br>
 Les premiers affichages donnent ceci :
 <pre>
@@ -32,8 +32,9 @@ eax = 00000003  ebx = B7729000  ecx = 7FFFFFE0  edx = B76E8870
 esi = BFB2933C  edi = 08048410  ebp = BFB29330  esp = BFB29330
 Nombre virgule flottante : 3.490000e+00
 </pre>
-Nous voyons que le cacul donne 3,49 et le résultat entier dans eax est 3. Si vous remplacez le premier nombre 2,49 par 2,51, vous verrez que l’entier stocké est arrondi à 4.
+Nous voyons que le calcul donne 3,49 et le résultat entier dans eax est 3. Si vous remplacez le premier nombre 2,49 par 2,51, vous verrez que l’entier stocké est arrondi à 4.
 Ouf, suffit pour aujourd’hui !!  
+
 Reprise quelques jours après !! Dans le programme pgm21_1 j’ai écris une routine de saisie des nombres en virgule flottante. Mais pas encore question de convertir directement la saisie en un float en double précision, alors j’ai préféré convertir tous les chiffres de  la saisie en entier avec la routine conversionAtoD déjà vue, déterminer le nombre de chiffres après la virgule pour calculer un diviseur puis effectuer avec les instructions en virgule flottante, la division des deux pour avoir un résultat correcte. <br>
 Par exemple :  saisie de 1234,56   conversion en entier 123456 et nombre de chiffres après la virgule 2 soit un diviseur de 1 * 10 * 10 = 100.  Division de 123456 par 100 ce qui donnera 1234,56 stocké en virgule flottante. <br>
 Bien sûr cette  routine ne peut pas être utilisée pour des nombres > 2 puissance 31 -1 ni pour des saisies de la forme x.xxxxEy mais cela suffira pour tester plusieurs instructions en virgule flottante.<br>
@@ -42,10 +43,10 @@ Dans la routine nous réservons une zone sur la pile de 88 octets avec l’instr
 Ensuite nous effectuons l’appel système READ en passant l’adresse de la zone de 80 octets puis nous effectuons une boucle pour détecter la virgule et la fin de chaine. Nous effectuons la conversion de la totalité de la chaine saisie (cad sans tenir compte de la virgule) dans le registre eax que nous stockons dans la zone dividende. Puis nous calculons le diviseur en effectuant une boucle de multiplication par 10 autant de fois que de chiffres après la virgule. <br>
 Après stockage du diviseur nous effectuons la division en virgule flottante avec fdiv et nous stockons le résultat à l’adresse récupérée comme paramètre ([epb+8]).<br>
 Au retour dans le programme principal, nous affichons la valeur de la zone réceptrice pour contrôle puis nous effectuons une multiplication pour calculer le carré (j’ai mis en commentaire les autres manières d’effectuer la multiplication) puis la racine carrée, la valeur absolue, l’inversion de signe, l’arrondi,  le cosinus puis enfin la comparaison avec PI (qui est une constante prédéfinie). <br>
-Pour la comparaison, j’ai utilisé l’instruction fcomi qui met à jour directement les indicateurs zéro, parité et carry. Curieusement l’indicateur de signe n’est pas mis à jour. D’après des documentations, il est possible d’utiliser l’instruction fcom maiq qui ne met pas à jour ces indicateurs. Il faut donc ensuite charger les indicateurs  dans le registre eflag par <pre>
+Pour la comparaison, j’ai utilisé l’instruction fcomi qui met à jour directement les indicateurs zéro, parité et carry. Curieusement l’indicateur de signe n’est pas mis à jour. D’après des documentations, il est possible d’utiliser l’instruction fcom mais qui ne met pas à jour ces indicateurs. Il faut donc ensuite charger les indicateurs  dans le registre eflag par <pre>
 Fstsw ax
-Sahf <pre>
-Voici un résultat de l’exècution de ce petit programme :
+Sahf </pre>
+Voici un résultat de l’exécution de ce petit programme :
 <pre>
 Début du programme.
 Veuillez saisir un nombre avec virgule :
