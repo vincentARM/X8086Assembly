@@ -17,12 +17,19 @@ enter :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapit
 
 global :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre001">Chapitre 1 </a>
 
+idiv:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre007">Chapitre 7 </a>
+
+imul:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre007">Chapitre 7 </a>
+
 inc :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
 
 int : <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre001">Chapitre 1 </a>
 
+jc:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
 je :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a> <br>
-jmp:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
+jmp:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a> <br>
+jo:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
+js:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre007">Chapitre 7 </a>
 
 leave :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre004">Chapitre 4 </a>
 
