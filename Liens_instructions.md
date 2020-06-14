@@ -7,11 +7,17 @@ cmp : mémoire <a href="https://github.com/vincentARM/X8086Assembly/tree/master/
 
 db: <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
 
+dec :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
+
+div :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
+
 equ :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
 
 enter :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre004">Chapitre 4 </a>
 
 global :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre001">Chapitre 1 </a>
+
+inc :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
 
 int : <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre001">Chapitre 1 </a>
 
@@ -41,4 +47,6 @@ ret :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre
 sub :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
 
 section : <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
+
+xchg :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
 
