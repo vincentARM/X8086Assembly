@@ -46,6 +46,8 @@ mov : mémoire :  <a href="https://github.com/vincentARM/X8086Assembly/tree/mast
 
 mul :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
 
+neg:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre007">Chapitre 7 </a>
+
 not:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre008">Chapitre 8 </a>
 
 or:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre008">Chapitre 8 </a>
@@ -62,6 +64,16 @@ resb :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitr
 
 ret :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
 
+rol:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
+
+ror:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
+
+shl:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
+
+sar:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
+
+shr:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
+
 sub :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
 
 section : <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
@@ -70,3 +82,4 @@ xchg :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitr
 
 xor:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre008">Chapitre 8 </a>
 
+%include:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre009">Chapitre 9 </a>
