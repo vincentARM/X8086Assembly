@@ -3,6 +3,18 @@ add:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre0
 
 and:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre008">Chapitre 8 </a>
 
+bt:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
+
+btc:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
+
+btr:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
+
+bts:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
+
+bsf:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
+
+bsr:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
+
 call :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
 
 cmp : mémoire <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
@@ -59,6 +71,10 @@ popf :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitr
 push :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a><br>
 pusha : <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre003">Chapitre 3 </a>
 pushf :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre011">Chapitre 11 </a>
+
+rcl:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
+
+rcr:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
 
 resb :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre005">Chapitre 5 </a>
 
