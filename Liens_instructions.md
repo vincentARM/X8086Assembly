@@ -28,10 +28,13 @@ inc :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre
 int : <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre001">Chapitre 1 </a>
 
 jc:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
+jcxz :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre011">Chapitre 11 </a>
 je :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a> <br>
 jmp:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a> <br>
 jo:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
 js:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre007">Chapitre 7 </a>
+
+lahf :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre011">Chapitre 11 </a>
 
 leave :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre004">Chapitre 4 </a>
 
@@ -49,9 +52,11 @@ or:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre00
 
 pop :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a><br>
 popa :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre003">Chapitre 3 </a>
+popf :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre011">Chapitre 11 </a>
 
 push :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a><br>
 pusha : <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre003">Chapitre 3 </a>
+pushf :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre011">Chapitre 11 </a>
 
 resb :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre005">Chapitre 5 </a>
 
