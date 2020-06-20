@@ -1,6 +1,8 @@
 Liste des instructions utilisées avec le lien vers le chapitre :<br>
 add:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
 
+and:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre008">Chapitre 8 </a>
+
 call :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
 
 cmp : mémoire <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
@@ -41,6 +43,10 @@ mov : mémoire :  <a href="https://github.com/vincentARM/X8086Assembly/tree/mast
 
 mul :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
 
+not:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre008">Chapitre 8 </a>
+
+or:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre008">Chapitre 8 </a>
+
 pop :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a><br>
 popa :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre003">Chapitre 3 </a>
 
@@ -56,4 +62,6 @@ sub :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre
 section : <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
 
 xchg :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
+
+xor:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre008">Chapitre 8 </a>
 
