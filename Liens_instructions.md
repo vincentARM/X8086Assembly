@@ -29,6 +29,13 @@ equ :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre
 
 enter :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre004">Chapitre 4 </a>
 
+fadd :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre021">Chapitre 21 </a><br>
+faddp :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre021">Chapitre 21 </a><br>
+fild :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre021">Chapitre 21 </a><br>
+finit :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre021">Chapitre 21 </a><br>
+fld :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre021">Chapitre 21 </a><br>
+fstp :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre021">Chapitre 21 </a>
+
 global :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre001">Chapitre 1 </a>
 
 idiv:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre007">Chapitre 7 </a>
