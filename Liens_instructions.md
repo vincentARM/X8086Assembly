@@ -43,8 +43,9 @@ jc:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre00
 jcxz :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre011">Chapitre 11 </a>
 je :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a> <br>
 jmp:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a> <br>
-jo:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a>
-js:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre007">Chapitre 7 </a>
+jo:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre006">Chapitre 6 </a> <br>
+js:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre007">Chapitre 7 </a> <br>
+      voir aussi <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre011">Chapitre 11 </a>
 
 lahf :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre011">Chapitre 11 </a>
 
@@ -65,11 +66,11 @@ not:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre0
 or:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre008">Chapitre 8 </a>
 
 pop :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a><br>
-popa :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre003">Chapitre 3 </a>
+popa :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre003">Chapitre 3 </a><br>
 popf :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre011">Chapitre 11 </a>
 
 push :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a><br>
-pusha : <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre003">Chapitre 3 </a>
+pusha : <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre003">Chapitre 3 </a><br>
 pushf :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre011">Chapitre 11 </a>
 
 rcl:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre010">Chapitre 10 </a>
