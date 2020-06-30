@@ -55,3 +55,5 @@ Remarque 2 : ce document est écrit au fur et à mesure directement sur Github e
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre022">Chapitre 22 : Lecture des informations d'un fichier. Utilisation du tas.</a></h3>
 
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre023">Chapitre 23 : Instruction CPUID. Insertion sous chaine dans chaine.</a></h3>
+
+<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre024">Chapitre 24 : Calculs avec des nombres au format BCD.</a></h3>
