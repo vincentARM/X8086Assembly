@@ -1,4 +1,10 @@
 Liste des instructions utilisées avec le lien vers le chapitre :<br>
+aaa:   <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre024">Chapitre 24 </a>
+
+aas:   <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre024">Chapitre 24 </a>
+
+aam:   <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre024">Chapitre 24 </a>
+
 add:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
 
 and:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre008">Chapitre 8 </a>
@@ -18,6 +24,12 @@ bsr:  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre0
 call :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
 
 cmp : mémoire <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
+
+cpuid :  <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre023">Chapitre 23 </a>
+
+daa:   <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre024">Chapitre 24 </a>
+
+das:   <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre024">Chapitre 24 </a>
 
 db: <a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre002">Chapitre 2 </a>
 
