@@ -39,5 +39,5 @@ Après correction des erreurs,  la première exécution ne fait rien apparaitre 
 Après vérification et recherche sur Internet, le FrameBuffer Ubuntu n’affiche pas l’image sur le bureau graphique mais sur l’écran lié à la console N°1 accessible par les touches ctrl+alt+F1. Et là miracle les droites s’affichent bien à l’écran. Bon les messages d’infos aussi !! Il faut donc lancer le programme depuis soit un autre ordinateur soit depuis un autre terminal ou le bureau graphique d’Ubuntu. <br>
 Je vous laisse le soin de pratiquer à fond l’assembleur pour écrire toutes les routines de dessin : rectangle, rectangle plein, cercle, arc de cercle, polygones etc. en testant divers algorithmes et en optimisant !!! Bon courage.<br>
 Un dernier point : il est possible de charger une image au format .bmp rien qu’en assembleur et des appels système. Par contre pour des images png ou jpg il faudra passer par des appels de fonctions de librairies en C.<br>
-Documentation : https://www.kernel.org/doc/Documentation/fb/framebuffer.txt
+Documentation : https://www.kernel.org/doc/Documentation/fb/framebuffer.txt <br>
 http://www.pinon-hebert.fr/Knowledge/index.php/Frame_Buffer
