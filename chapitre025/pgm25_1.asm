@@ -1,6 +1,6 @@
 ; assembleur 32 bits Linux 
 ; programme : pgm25.asm
-; utilisation du framebuffer : affichage informations
+; utilisation du framebuffer : dessin de droites
 ; les routines d'affichage sont déportées dans le fichier routines.asm
 ; les constantes sont déportées dans le fichier constantes32.asm
 ; les macros sont déportées dans le fichier macros32.asm
