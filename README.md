@@ -60,3 +60,4 @@ Remarque 2 : ce document est écrit au fur et à mesure directement sur Github e
 
 <h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre025">Chapitre 25 : Dessiner avec le FrameBuffer.</a></h3>
 
+<h3><a href="https://github.com/vincentARM/X8086Assembly/tree/master/chapitre026">Chapitre 26 : Calcul nombre d'instructions et de cycles avec perf-event-open.</a></h3>
