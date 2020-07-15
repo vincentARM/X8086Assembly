@@ -1,4 +1,5 @@
 Après avoir découvert les principales instructions de l’assembleur puis d’avoir écrit les premières routines, il est intéressant d’essayer d’optimiser celles ci soit en réduisant le nombre d’instructions soit en utilisant celles qui génèrent le moins de cycles. Intel fournit une documentation sur l’optimisation de ces processeurs disponible sur ce site : <br>
+https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-optimization-reference-manual.html <br>
 Pour nous permettre de calculer le nombre d’instructions et le nombre de cycles, nous allons utiliser un appel systeme Linux qui permet d’effectuer de nombreuses analyses : perf_event_open . Vous trouverez la documentation en français sur ce site : <br> https://man.developpez.com/man2/perf_event_open/ <br>
 Mais il existe aussi des documentations en anglais et aussi des exemples sur internet.
 Pour utiliser cet appel système il faut charger le package linux-tools-common et mettre la valeur -1 dans le fichier perf_event_paranoid avec la commande :<pre>
@@ -16,7 +17,7 @@ instructions ou cycles : 342  temps en µs: 5004</pre>
 Dans mon cas, la boucle fait 20 tours de 3 instructions (call,ret,loop) soit 60 instructions. Entre l’appel IOCTL de déclenchement et celui d’arrêt il y a 8 instructions : cmp,jl,mov (la boucle) puis mov mov mov mov et int soit au total 68 instructions.<br>
 Plusieurs exécutions donne le même résultat pour le nombre d’instruction mais des temps d’exécution différents !!! <br>
 Pour le nombre de cycles, le résultat donne 5 cycles en moyenne par instruction ce qui me paraît élevé. Ce nombre change suivant l’exécution !! et le temps est toujours différent de celui du premier comptage. Ces résultats sont donc à manier avec précaution. <br>
-Je me demande si le nombre de cycle ne représente pas le nombre de micro instructions dans une architecture de type pipeline (chargement,décodage,exécution, etc) 
+Je me demande si le nombre de cycle ne représente pas le nombre de micro instructions dans une architecture de type pipeline (chargement,décodage,exécution, etc).<br> 
 Si vous mettez les bits 6 7 ou 8 à zéro dans la zone param de la structure, les chiffres prennent en compte les instructions du kernel et du superviseur. <br>
 Vous pouvez aussi essayer d’obtenir tous les autres compteurs disponibles !! <br>
 Il y a aussi une possibilité de regrouper différents compteurs pour éviter d’effectuer comme je l’ai fait 2 fois les mêmes instructions. Cela permet d’avoir les mêmes mesures pour la même séquence d’instructions. C’est ce que j’ai essayé de faire dans le programme mesurePerf2.asm mais je ne ny suis pas arrivé. !!!!! <br>
