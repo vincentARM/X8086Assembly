@@ -1,7 +1,7 @@
 Après avoir découvert les principales instructions de l’assembleur puis d’avoir écrit les premières routines, il est intéressant d’essayer d’optimiser celles ci soit en réduisant le nombre d’instructions soit en utilisant celles qui génèrent le moins de cycles. Intel fournit une documentation sur l’optimisation de ces processeurs disponible sur ce site : <br>
 https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-optimization-reference-manual.html <br>
 Pour nous permettre de calculer le nombre d’instructions et le nombre de cycles, nous allons utiliser un appel systeme Linux qui permet d’effectuer de nombreuses analyses : perf_event_open . Vous trouverez la documentation en français sur ce site : <br> https://man.developpez.com/man2/perf_event_open/ <br>
-Mais il existe aussi des documentations en anglais et aussi des exemples sur internet.
+Mais il existe aussi des documentations en anglais et aussi des exemples sur internet.<br>
 Pour utiliser cet appel système il faut charger le package linux-tools-common et mettre la valeur -1 dans le fichier perf_event_paranoid avec la commande :<pre>
 sudo nano /proc/sys/kernel/perf_event_paranoid
 </pre>
