@@ -66,4 +66,5 @@ Il existe encore de nombreuses instructions ainsi que des définitions de consta
 
 En juillet 2020, je découvre par hasard un algorithme de calcul de l'inverse d'une racine carrée en virgule flottante  voir <br>
 https://fr.wikipedia.org/wiki/Racine_carr%C3%A9e_inverse_rapide <br>
-J'ai donc écrit la routine dans le programme calculInvRac.asm qui fonctionne comme décrit dans l'article. Le résultat est stocké en 32 bits dans une zone mémoire mais la routine peut être modifiée pour retourner le résultat dans le registre eax ou être stockée dane une zone de 64 bits. <br>
+J'ai donc écrit la routine dans le programme calculInvRac.asm qui fonctionne comme décrit dans l'article. Le résultat est stocké en 32 bits dans une zone mémoire mais la routine peut être modifiée pour retourner le résultat dans le registre eax ou être stockée dans une zone de 64 bits. <br>
+Si necessaire, la précision peut être augmentée soit en effectuant une deuxième fois la dernière partie du calcul soit en réécrivant la routine avec des floats de 64 bits. <br>
