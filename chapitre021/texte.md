@@ -63,3 +63,7 @@ Plus petit que pi
 Fin normale du programme.
 </pre>
 Il existe encore de nombreuses instructions ainsi que des définitions de constantes comme zéro (fldz) ou 1 (fld1). Je vous laisse le soin de les découvrir. <br>
+
+En juillet 2020, je découvre par hasard un algorithme de calcul de l'inverse d'une racine carrée en virgule flottante  voir <br>
+https://fr.wikipedia.org/wiki/Racine_carr%C3%A9e_inverse_rapide <br>
+J'ai donc écrit la routine dans le programme calculInvRac.asm qui fonctionne comme décrit dans l'article. Le résultat est stocké en 32 bits dans une zone mémoire mais la routine peut être modifiée pour retourner le résultat dans le registre eax ou être stockée dane une zone de 64 bits. <br>
